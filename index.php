@@ -9,7 +9,7 @@ $aver=$accesso->get_version();
 echo $aid;
 echo $asec;
 echo $aver;
-/*$fb = new Facebook\Facebook([
+$fb = new Facebook\Facebook([
   'app_id' => $aid,
   'app_secret' => $asec,
   'default_graph_version' => $aver
@@ -19,7 +19,7 @@ $helper = $fb->getRedirectLoginHelper();
 $permissions = ['email', 'user_likes']; // optional
 $loginUrl = $helper->getLoginUrl('https://www.nslatino.com/nscomment/login/procesaLogin.php', $permissions);
 echo '<a href="' . $loginUrl . '">Log in with Facebook!</a>';
-*/
+
 
 
 
