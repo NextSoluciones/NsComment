@@ -1,11 +1,12 @@
 <?php
 session_start();
+include "bin/config.php";
 require_once __DIR__ . './../vendor/autoload.php';
-
+$accesso= new Config();
 $fb = new Facebook\Facebook([
-  'app_id' => '1830686757172000',
-  'app_secret' => '92b01f24e5f7de615bc22597e85e79f8',
-  'default_graph_version' => 'v2.8',
+  'app_id' => $accesso->get_id(),
+  'app_secret' => $accesso->get_secret(),
+  'default_graph_version' => $accesso->get_version(),
 ]);
 
   $helper = $fb->getRedirectLoginHelper();
