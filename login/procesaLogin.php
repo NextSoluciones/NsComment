@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "bin/config.php";
+include "./../bin/config.php";
 require_once __DIR__ . './../vendor/autoload.php';
 $accesso= new Config();
 $fb = new Facebook\Facebook([
