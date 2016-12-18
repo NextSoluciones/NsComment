@@ -10,7 +10,7 @@ $fb = new Facebook\Facebook([
 
 $helper = $fb->getRedirectLoginHelper();
 $permissions = ['email', 'user_likes']; // optional
-$loginUrl = $helper->getLoginUrl('https://www.nslatino.com/login/procesaLogin.php', $permissions);
+$loginUrl = $helper->getLoginUrl('https://www.nslatino.com/nscomment/login/procesaLogin.php', $permissions);
 echo '<a href="' . $loginUrl . '">Log in with Facebook!</a>';
 
 
