@@ -33,10 +33,10 @@ $fb = new Facebook\Facebook([
 
     // Logged in
     echo '<h3>Signed Request</h3>';
-    var_dump($helper->getSignedRequest());
+    //var_dump($helper->getSignedRequest());
 
     echo '<h3>Access Token</h3>';
-    var_dump($accessToken->getValue());
+    //var_dump($accessToken->getValue());
 
     //echo "Login Exitoso. El access Token es ".$_SESSION['facebook_access_token'];
     //header('Location: https://www.nslatino.com/nscomment/mod/me.php');
