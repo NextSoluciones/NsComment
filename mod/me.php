@@ -28,5 +28,7 @@ try {
 }
 
 echo 'Logged in as ' . $userNode->getName();
+echo "<br/>";
+var_dump($userNode);
 
 ?>
