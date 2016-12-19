@@ -26,8 +26,8 @@ $fb = new Facebook\Facebook([
   if (isset($accessToken)) {
     // Logged in!
     $_SESSION['facebook_access_token'] = (string) $accessToken;
-    echo "Login Exitoso. El access Token es ".$_SESSION['facebook_access_token'];
-
+    //echo "Login Exitoso. El access Token es ".$_SESSION['facebook_access_token'];
+    header('Location: https://www.nslatino.com/nscomment/mod/me.php');
     // Now you can redirect to another page and use the
     // access token from $_SESSION['facebook_access_token']
   }
