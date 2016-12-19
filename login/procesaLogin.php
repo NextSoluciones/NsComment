@@ -28,7 +28,7 @@ $fb = new Facebook\Facebook([
     exit;
   }
 
-    $_SESSION['facebook_access_token'] = (string) $accessToken;
+    //$_SESSION['facebook_access_token'] = (string) $accessToken;
 
 
     // Logged in
