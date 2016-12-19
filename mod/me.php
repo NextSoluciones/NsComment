@@ -15,7 +15,7 @@ $fb = new Facebook\Facebook([
 $fb->setDefaultAccessToken($_SESSION['facebook_access_token']);
 try {
   $response = $fb->get('/me');
-  $publicaciones = $fb->get('10210540908973133/feed');
+  $publicaciones = $fb->get('/10210540908973133/feed');
   $userNode = $response->getGraphUser();
 } catch(Facebook\Exceptions\FacebookResponseException $e) {
   // When Graph returns an error
