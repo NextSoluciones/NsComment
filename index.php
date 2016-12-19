@@ -22,8 +22,13 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 </script>
-
-<?php
+<div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
+<?php /*
 session_start();
 include "bin/config.php";
 require_once __DIR__ . '/vendor/autoload.php';
@@ -38,7 +43,7 @@ $fb = new Facebook\Facebook([
 $helper = $fb->getRedirectLoginHelper();
 $permissions = ['email', 'user_likes', 'manage_pages']; // optional
 $loginUrl = $helper->getLoginUrl('https://www.nslatino.com/nscomment/login/procesaLogin.php', $permissions);
-echo '<a href="' . $loginUrl . '">Log in with Facebook!</a>';
+echo '<a href="' . $loginUrl . '">Log in with Facebook!</a>';*/
 ?>
 </body>
 </html>
