@@ -21,11 +21,13 @@ $fb = new Facebook\Facebook([
     // When validation fails or other local issues
     echo 'Facebook SDK returned an error: ' . $e->getMessage();
     exit;
-}
+  }
 
+  if (! isset($accessToken)) {
+    echo 'No OAuth data could be obtained from the signed request. User has not authorized your app yet.';
+    exit;
+  }
 
-  if (isset($accessToken)) {
-    // Logged in!
     $_SESSION['facebook_access_token'] = (string) $accessToken;
 
 
@@ -40,6 +42,6 @@ $fb = new Facebook\Facebook([
     //header('Location: https://www.nslatino.com/nscomment/mod/me.php');
     // Now you can redirect to another page and use the
     // access token from $_SESSION['facebook_access_token']
-  }*/
+  */
 
 ?>
