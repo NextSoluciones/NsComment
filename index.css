@@ -1,7 +1,13 @@
 footer{
+  height: 5vh;
+  width: 100%;
+  display: block;
   position: fixed;
   bottom: 2rem;
   left: 1rem;
   background-color: #1C1C12;
   color: #B2B24D;
+}
+footer a{
+  text-decoration: none;
 }
