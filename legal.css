@@ -1,0 +1,50 @@
+body{
+  background-color: #C8C9FF;
+}
+.contenedor{
+  display: block;
+  width: 90vw;
+  margin: 0 auto;
+  margin-top: 5vh;
+  background-color: #fff;
+  padding: 1rem;
+  color: #18242D;
+}
+.titulo{
+  margin: 0 auto;
+  text-align: center;
+  font-size: 14pt;
+}
+.contenido{
+  font-size: 12pt;
+  font-family: 'Roboto', sans-serif;
+}
+.titulo, .subtitulo-1, .subtitulo-2, .item{
+  font-family: 'Lato', sans-serif;
+  color: #18242D;
+}
+.subtitulo-1{
+  font-size: 14pt;
+}
+.subtitulo-2{
+  padding-left: 2rem;
+  font-size: 12pt;
+}
+.pad2{
+  padding-left: 2rem;
+}
+.item{
+  padding-left: 4rem;
+  font-size: 12pt;
+}
+.pad3{
+  padding-left: 4rem;
+}
+.ident{
+  text-indent: 2rem;
+}
+.contenedor-2{
+  display: block;
+  padding: 0.5rem;
+  background-color: #AEAFDE;
+}
