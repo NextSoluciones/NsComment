@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>nscomment</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./index.css">
   </head>
   <body>
 
