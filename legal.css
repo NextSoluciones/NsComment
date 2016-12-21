@@ -9,6 +9,7 @@ body{
   background-color: #fff;
   padding: 1rem;
   color: #18242D;
+  border-radius: 1em;
 }
 .titulo{
   margin: 0 auto;
@@ -42,9 +43,4 @@ body{
 }
 .ident{
   text-indent: 2rem;
-}
-.contenedor-2{
-  display: block;
-  padding: 0.5rem;
-  background-color: #AEAFDE;
 }
