@@ -99,6 +99,6 @@
     <div id="status">
     </div>
 
-
+    <footer><a href="legal.html">Avisos Legales y Pol&iacute;tica de Privacidad</a></footer>
 </body>
 </html>
