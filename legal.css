@@ -13,18 +13,22 @@ body{
   position: relative;
 }
 .volver{
-  width: 5rem
+  width: 10rem;
+  height: 5rem;
   position: absolute;
   top: 1rem;
   right: 1rem;
   display: flex;
   background-color: #1C1C12;
+  padding: 1rem;
+  border-radius: 0.5rem;
 }
 .volver a{
   display: inherit;
   color: #B2B24D;
   justify-content: flex-end;
   align-items: center;
+  text-decoration: none;
 }
 .titulo{
   margin: 0 auto;
