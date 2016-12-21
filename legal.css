@@ -13,14 +13,14 @@ body{
   position: relative;
 }
 .volver{
-  width: 10rem;
-  height: 5rem;
+  width: 4rem;
+  height: 2rem;
   position: absolute;
   top: 1rem;
   right: 1rem;
   display: flex;
   background-color: #1C1C12;
-  padding: 1rem;
+  padding: 0.5rem;
   border-radius: 0.5rem;
 }
 .volver a{
