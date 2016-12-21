@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>nscomment</title>
     <link rel="stylesheet" href="./index.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet">
   </head>
   <body>
 

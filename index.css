@@ -12,6 +12,7 @@ footer{
   vertical-align: middle;
 }
 footer a{
+  font-family: 'Lato', sans-serif;
   display: inherit;
   text-decoration: none;
   color: #B2B24D;
