@@ -13,6 +13,7 @@ body{
   position: relative;
 }
 .volver{
+  width: 5rem
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -22,7 +23,7 @@ body{
 .volver a{
   display: inherit;
   color: #B2B24D;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
 }
 .titulo{
