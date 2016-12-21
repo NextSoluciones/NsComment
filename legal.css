@@ -10,6 +10,20 @@ body{
   padding: 1rem;
   color: #18242D;
   border-radius: 1em;
+  position: relative;
+}
+.volver{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  background-color: #1C1C12;
+}
+.volver a{
+  display: inherit;
+  color: #B2B24D;
+  justify-content: flex-start;
+  align-items: center;
 }
 .titulo{
   margin: 0 auto;
@@ -20,7 +34,7 @@ body{
   font-size: 12pt;
   font-family: 'Roboto', sans-serif;
 }
-.titulo, .subtitulo-1, .subtitulo-2, .item{
+.titulo, .subtitulo-1, .subtitulo-2, .item, .volver{
   font-family: 'Lato', sans-serif;
   color: #18242D;
 }
