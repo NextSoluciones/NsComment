@@ -1,15 +1,21 @@
 footer{
+  margin: 0;
   height: 10vh;
-  display: block;
-  position: fixed;
+  width: 90vw;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
   bottom: 2rem;
-  left: 1rem;
+  left: 0;
   background-color: #1C1C12;
   padding: 1rem;
   vertical-align: middle;
 }
 footer a{
+  display: inherit;
   text-decoration: none;
   color: #B2B24D;
   display: block;
+  justify-content: flex-start;
+  align-items: center;
 }
