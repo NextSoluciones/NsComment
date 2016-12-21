@@ -24,6 +24,7 @@ body{
   border-radius: 0.5rem;
 }
 .volver a{
+  width: 2rem;
   display: inherit;
   color: #B2B24D;
   justify-content: center;
