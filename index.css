@@ -1,14 +1,14 @@
 footer{
-  height: 5vh;
+  height: 10vh;
   width: 100%;
   display: block;
   position: fixed;
   bottom: 2rem;
   left: 1rem;
-  background-color: #1C1C12;
-  color: #B2B24D;
+  background-color: #1C1C12;  
 }
 footer a{
   text-decoration: none;
-  text-decoration-color: none;
+  color: #B2B24D;
+  line-height: 100%;
 }
