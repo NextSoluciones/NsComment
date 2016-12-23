@@ -13,4 +13,5 @@ $fb = new Facebook\Facebook([
 $helper = $fb->getRedirectLoginHelper();
 $logoutUrl = $helper->getLogoutUrl($_SESSION['facebook_access_token'], 'https://www.nslatino.com/nscomment/index.php');
 session_destroy();
-header('Location: $logoutUrl');
+$redirigir="Location: ".$logoutUrl;
+header($redirigir);
