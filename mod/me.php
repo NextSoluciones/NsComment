@@ -23,28 +23,29 @@ $fb = new Facebook\Facebook([
 ]);
 if(isset($_GET['action']) && $_GET['action'] === 'logout'){
         $fb->destroySession();
+    }else{
+    // Sets the default fallback access token so we don't have to pass it to each request
+    $fb->setDefaultAccessToken($_SESSION['facebook_access_token']);
+    try {
+      $response = $fb->get('/me');
+      $userNode = $response->getGraphUser();
+    } catch(Facebook\Exceptions\FacebookResponseException $e) {
+      // When Graph returns an error
+      echo 'Graph returned an error: ' . $e->getMessage();
+      exit;
+    } catch(Facebook\Exceptions\FacebookSDKException $e) {
+      // When validation fails or other local issues
+      echo 'Facebook SDK returned an error: ' . $e->getMessage();
+      exit;
     }
-// Sets the default fallback access token so we don't have to pass it to each request
-$fb->setDefaultAccessToken($_SESSION['facebook_access_token']);
-try {
-  $response = $fb->get('/me');
-  $userNode = $response->getGraphUser();
-} catch(Facebook\Exceptions\FacebookResponseException $e) {
-  // When Graph returns an error
-  echo 'Graph returned an error: ' . $e->getMessage();
-  exit;
-} catch(Facebook\Exceptions\FacebookSDKException $e) {
-  // When validation fails or other local issues
-  echo 'Facebook SDK returned an error: ' . $e->getMessage();
-  exit;
-}
 
-echo 'Haz iniciado sesión correctamente como ' . $userNode->getName();
-$_SESSION['logueado']=true;
-/*echo "<br/>";
-var_dump($userNode);
-$plainOldArray = $response->getDecodedBody();
-var_dump($plainOldArray);*/
+    echo 'Haz iniciado sesión correctamente como ' . $userNode->getName();
+    $_SESSION['logueado']=true;
+    /*echo "<br/>";
+    var_dump($userNode);
+    $plainOldArray = $response->getDecodedBody();
+    var_dump($plainOldArray);*/
+}
 
 ?>
 <footer><ul id="pie">
