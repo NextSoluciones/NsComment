@@ -19,7 +19,10 @@ footer a{
   justify-content: flex-start;
   align-items: center;
 }
-footer ul{
+#pie{
   list-style:none;
-  display: inline-block;
+  display: flex;
+}
+#pie li{
+  justify-content: flex-start;
 }
