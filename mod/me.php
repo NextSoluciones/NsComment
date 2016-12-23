@@ -13,9 +13,7 @@
 session_start();
 include "./../bin/config.php";
 require_once __DIR__ . './../vendor/autoload.php';
-if(isset($_GET['action']) && $_GET['action'] === 'logout'){
-        $facebook->destroySession();
-    }
+
 $accesso= new Config();
 
 $fb = new Facebook\Facebook([
@@ -23,7 +21,9 @@ $fb = new Facebook\Facebook([
   'app_secret' => $accesso->get_secret(),
   'default_graph_version' => $accesso->get_version()
 ]);
-
+if(isset($_GET['action']) && $_GET['action'] === 'logout'){
+        $fb->destroySession();
+    }
 // Sets the default fallback access token so we don't have to pass it to each request
 $fb->setDefaultAccessToken($_SESSION['facebook_access_token']);
 try {
