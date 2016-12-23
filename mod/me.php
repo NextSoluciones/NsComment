@@ -37,6 +37,7 @@ try {
 }
 
 echo 'Haz iniciado sesión correctamente como ' . $userNode->getName();
+$_SESSION['logueado']=true;
 /*echo "<br/>";
 var_dump($userNode);
 $plainOldArray = $response->getDecodedBody();

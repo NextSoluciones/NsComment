@@ -10,6 +10,11 @@
     <h1>Gesti&oacute;n de Comentarios</h1>
     <?php
     session_start();
+    if (isset($_SESSION['logueado'])) {
+      if ($_SESSION['logueado']==true){
+        header('Location: https://www.nslatino.com/nscomment/mod/me.php');
+      }
+    }
     include "bin/config.php";
     require_once __DIR__ . '/vendor/autoload.php';
     $accesso= new Config();
