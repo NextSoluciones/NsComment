@@ -8,12 +8,14 @@
   </head>
   <body>
     <h1>Gesti&oacute;n de Comentarios</h1>
-    <div class="logout"><a href="#">Cerrar Sesi&oacute;n</a></div>
+    <div class="logout"><a href="?action=logout">Cerrar Sesi&oacute;n</a></div>
 <?php
 session_start();
 include "./../bin/config.php";
 require_once __DIR__ . './../vendor/autoload.php';
-
+if(isset($_GET['action']) && $_GET['action'] === 'logout'){
+        $facebook->destroySession();
+    }
 $accesso= new Config();
 
 $fb = new Facebook\Facebook([
