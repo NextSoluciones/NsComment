@@ -27,9 +27,9 @@ footer a:hover{
 .logout{
   display: block;
   position: absolute;
-  top:2rem;
-  right: 2rem;
-  width: 5rem;
+  top:1rem;
+  right: 1rem;
+  width: 7rem;
   border-radius: 1rem;
   background-color: #1C1C12;
   padding: 1rem;
