@@ -26,6 +26,10 @@ footer a:hover{
 }
 .logout{
   display: block;
+  position: absolute;
+  top:2rem;
+  right: 2rem;
+  width: 5rem;
   border-radius: 1rem;
   background-color: #1C1C12;
   padding: 1rem;
@@ -34,4 +38,7 @@ footer a:hover{
   font-family: 'Lato', sans-serif;
   text-decoration: none;
   color: #B2B24D;
+}
+.logout a:hover{
+  color: #D9ECFA;
 }
