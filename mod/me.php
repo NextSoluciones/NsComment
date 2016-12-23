@@ -8,6 +8,7 @@
   </head>
   <body>
     <h1>Gesti&oacute;n de Comentarios</h1>
+    <div class="logout"><a href="#">Cerrar Sesi&oacute;n</a></div>
 <?php
 session_start();
 include "./../bin/config.php";

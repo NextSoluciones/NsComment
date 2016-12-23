@@ -24,3 +24,14 @@ footer a:hover{
 #pie li{
   padding-right: 2rem;
 }
+.logout{
+  display: block;
+  border-radius: 1rem;
+  background-color: #1C1C12;
+  padding: 1rem;
+}
+.logout a{
+  font-family: 'Lato', sans-serif;
+  text-decoration: none;
+  color: #B2B24D;
+}
