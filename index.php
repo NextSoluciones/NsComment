@@ -101,6 +101,7 @@
     <div id="status">
     </div>
 
-    <footer><a href="legal.html">Avisos Legales y Pol&iacute;tica de Privacidad</a></footer>
+    <footer><a href="legal.html">Avisos Legales y Pol&iacute;tica de Privacidad</a>
+    <a href="terminos.html">T&eacute;rminos y Condiciones</a></footer>
 </body>
 </html>
