@@ -23,6 +23,7 @@ $fb = new Facebook\Facebook([
 ]);
 if(isset($_GET['action']) && $_GET['action'] === 'logout'){
         session_destroy();
+        header('Location: https://www.nslatino.com/nscomment/index.php');
     }else{
     // Sets the default fallback access token so we don't have to pass it to each request
     $fb->setDefaultAccessToken($_SESSION['facebook_access_token']);
