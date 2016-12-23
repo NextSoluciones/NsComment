@@ -22,7 +22,7 @@ $fb = new Facebook\Facebook([
   'default_graph_version' => $accesso->get_version()
 ]);
 if(isset($_GET['action']) && $_GET['action'] === 'logout'){
-        echo "hasta aquí llego";
+        session_destroy();
     }else{
     // Sets the default fallback access token so we don't have to pass it to each request
     $fb->setDefaultAccessToken($_SESSION['facebook_access_token']);
