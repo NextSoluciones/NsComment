@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Sesion iniciada</title>
+    <link rel="stylesheet" href="./../index.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet">
+  </head>
+  <body>
+    <h1>Gesti&oacute;n de Comentarios</h1>
 <?php
 session_start();
 include "./../bin/config.php";
@@ -33,3 +43,9 @@ $plainOldArray = $response->getDecodedBody();
 var_dump($plainOldArray);*/
 
 ?>
+<footer><ul id="pie">
+  <li><a href="legal.html">Avisos Legales y Pol&iacute;tica de Privacidad</a></li>
+  <li><a href="terminos.html">T&eacute;rminos y Condiciones</a></li>
+</ul></footer>
+</body>
+</html>
