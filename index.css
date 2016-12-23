@@ -14,6 +14,9 @@ footer a{
   text-decoration: none;
   color: #B2B24D;
 }
+footer a:hover{
+  color: #D9ECFA;
+}
 #pie{
   list-style:none;
   display: flex;
