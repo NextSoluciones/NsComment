@@ -21,11 +21,11 @@
       'default_graph_version' => $accesso->get_version()
     ]);
 
-    // if (isset($_SESSION['logueado'])) {
-    //   if ($_SESSION['logueado']==true){
-    //     header('Location: https://www.nslatino.com/nscomment/mod/me.php');
-    //   }
-    // }
+    if (isset($_SESSION['logueado'])) {
+       if ($_SESSION['logueado']==true){
+        header('Location: https://www.nslatino.com/nscomment/mod/me.php');
+      }
+    }
 
     $helper = $fb->getRedirectLoginHelper();
     $permissions = ['email', 'user_likes', 'manage_pages']; // optional

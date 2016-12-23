@@ -22,11 +22,8 @@ $fb = new Facebook\Facebook([
   'default_graph_version' => $accesso->get_version()
 ]);
 
-$helper = $fb->getRedirectLoginHelper();
-$logoutUrl = $helper->getLogoutUrl($_SESSION['facebook_access_token'], 'https://www.nslatino.com/nscomment/index.php');
-
 ?>
-  <div class="logout"><a href="<?=$logoutUrl?>">Cerrar Sesi&oacute;n</a></div>
+  <div class="logout"><a href="./../login/logout.php">Cerrar Sesi&oacute;n</a></div>
 <?php
     // Sets the default fallback access token so we don't have to pass it to each request
     $fb->setDefaultAccessToken($_SESSION['facebook_access_token']);
@@ -44,6 +41,7 @@ $logoutUrl = $helper->getLogoutUrl($_SESSION['facebook_access_token'], 'https://
     }
 
     echo 'Haz iniciado sesión correctamente como ' . $userNode->getName();
+    $_SESSION['logueado'] =true;
     /*echo "<br/>";
     var_dump($userNode);
     $plainOldArray = $response->getDecodedBody();
