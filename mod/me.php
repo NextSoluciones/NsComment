@@ -44,8 +44,8 @@ var_dump($plainOldArray);*/
 
 ?>
 <footer><ul id="pie">
-  <li><a href="legal.html">Avisos Legales y Pol&iacute;tica de Privacidad</a></li>
-  <li><a href="terminos.html">T&eacute;rminos y Condiciones</a></li>
+  <li><a href="./../legal.html">Avisos Legales y Pol&iacute;tica de Privacidad</a></li>
+  <li><a href="./../terminos.html">T&eacute;rminos y Condiciones</a></li>
 </ul></footer>
 </body>
 </html>
