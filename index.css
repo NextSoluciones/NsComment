@@ -33,11 +33,13 @@ footer a:hover{
   border-radius: 1rem;
   background-color: #1C1C12;
   padding: 1rem;
+  text-align: center;
 }
 .logout a{
   font-family: 'Lato', sans-serif;
   text-decoration: none;
   color: #B2B24D;
+  font-size: 13pt;
 }
 .logout a:hover{
   color: #D9ECFA;
