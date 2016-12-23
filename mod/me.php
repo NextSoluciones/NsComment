@@ -26,10 +26,10 @@ try {
   exit;
 }
 
-echo 'Logged in as ' . $userNode->getName();
-echo "<br/>";
+echo 'Haz iniciado sesión correctamente como ' . $userNode->getName();
+/*echo "<br/>";
 var_dump($userNode);
 $plainOldArray = $response->getDecodedBody();
-var_dump($plainOldArray);
+var_dump($plainOldArray);*/
 
 ?>

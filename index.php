@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet">
   </head>
   <body>
-    <h1>Gestion de Comentarios</h1>
+    <h1>Gesti&oacute;n de Comentarios</h1>
     <?php
     session_start();
     include "bin/config.php";
