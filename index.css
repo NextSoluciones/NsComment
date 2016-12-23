@@ -15,10 +15,9 @@ footer a{
   color: #B2B24D;
 }
 #pie{
-  list-style:none;  
+  list-style:none;
   display: flex;
-  justify-content: space-between;
 }
 #pie li{
-
+  padding-right: 2rem;
 }
