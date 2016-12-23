@@ -10,11 +10,7 @@
     <h1>Gesti&oacute;n de Comentarios</h1>
     <?php
     session_start();
-    if (isset($_SESSION['logueado'])) {
-      if ($_SESSION['logueado']==true){
-        header('Location: https://www.nslatino.com/nscomment/mod/me.php');
-      }
-    }
+
     include "bin/config.php";
     require_once __DIR__ . '/vendor/autoload.php';
     $accesso= new Config();
@@ -24,6 +20,12 @@
       'app_secret' => $accesso->get_secret(),
       'default_graph_version' => $accesso->get_version()
     ]);
+
+    // if (isset($_SESSION['logueado'])) {
+    //   if ($_SESSION['logueado']==true){
+    //     header('Location: https://www.nslatino.com/nscomment/mod/me.php');
+    //   }
+    // }
 
     $helper = $fb->getRedirectLoginHelper();
     $permissions = ['email', 'user_likes', 'manage_pages']; // optional

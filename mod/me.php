@@ -44,7 +44,6 @@ $logoutUrl = $helper->getLogoutUrl($_SESSION['facebook_access_token'], 'https://
     }
 
     echo 'Haz iniciado sesión correctamente como ' . $userNode->getName();
-    $_SESSION['logueado']=true;
     /*echo "<br/>";
     var_dump($userNode);
     $plainOldArray = $response->getDecodedBody();
