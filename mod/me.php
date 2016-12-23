@@ -8,7 +8,7 @@
   </head>
   <body>
     <h1>Gesti&oacute;n de Comentarios</h1>
-    <div class="logout"><a href="?action=logout">Cerrar Sesi&oacute;n</a></div>
+
 <?php
 session_start();
 include "./../bin/config.php";
@@ -21,10 +21,13 @@ $fb = new Facebook\Facebook([
   'app_secret' => $accesso->get_secret(),
   'default_graph_version' => $accesso->get_version()
 ]);
-if(isset($_GET['action']) && $_GET['action'] === 'logout'){
-        session_destroy();
-        header('Location: https://www.nslatino.com/nscomment/index.php');
-    }else{
+
+$helper = $fb->getRedirectLoginHelper();
+$logoutUrl = $helper->getLogoutUrl($_SESSION['facebook_access_token'], 'https://www.nslatino.com/nscomment/index.php');
+
+?>
+  <div class="logout"><a href="<?=$logoutUrl?>">Cerrar Sesi&oacute;n</a></div>
+<?php
     // Sets the default fallback access token so we don't have to pass it to each request
     $fb->setDefaultAccessToken($_SESSION['facebook_access_token']);
     try {
@@ -46,7 +49,6 @@ if(isset($_GET['action']) && $_GET['action'] === 'logout'){
     var_dump($userNode);
     $plainOldArray = $response->getDecodedBody();
     var_dump($plainOldArray);*/
-}
 
 ?>
 <footer><ul id="pie">
