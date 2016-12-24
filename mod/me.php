@@ -47,6 +47,17 @@ $fb = new Facebook\Facebook([
     $plainOldArray = $response->getDecodedBody();
     var_dump($plainOldArray);*/
 
+    $request = new FacebookRequest(
+      $session,
+      'GET',
+      '/me/friends'
+    );
+
+    $response = $request->execute();
+    $graphObject = $response->getGraphObject();
+    /* handle the result */
+    var_dump($graphObject);
+
 ?>
 <footer><ul id="pie">
   <li><a href="./../legal.html">Avisos Legales y Pol&iacute;tica de Privacidad</a></li>
