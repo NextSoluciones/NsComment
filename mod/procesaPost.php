@@ -30,9 +30,9 @@ try {
   echo 'Facebook SDK returned an error: ' . $e->getMessage();
   exit;
 }
-var_dump($res);
-/*foreach ($res as $item) {
-  echo $item["from"]["name"]." : ".$item["message"]." >> ".$item["comment_count"]"<br/>";
-}*/
+//var_dump($res);
+foreach ($res as $item) {
+  echo $item["from"]["name"]." : ".$item["message"]." >> ".$item["comment_count"]."<br/>";
+}
 //echo $res[0]["from"]["name"]." : ".$res[0]["message"];
 ?>
