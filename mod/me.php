@@ -42,8 +42,16 @@ $fb = new Facebook\Facebook([
 
     echo 'Haz iniciado sesión correctamente como ' . $userNode->getName();
     $_SESSION['logueado'] =true;
-    
+
 ?>
+<section>
+  <article class="busqueda">
+    <form class="formulario" action="procesaPost.php" method="post">
+      <input type="text" name="id_post" value="Post a procesar (id.): " placeholder="p.e. 10548577854452"/>
+      <input type="submit" value="Procesar">
+    </form>
+  </article>
+</section>
 <footer><ul id="pie">
   <li><a href="./../legal.html">Avisos Legales y Pol&iacute;tica de Privacidad</a></li>
   <li><a href="./../terminos.html">T&eacute;rminos y Condiciones</a></li>
