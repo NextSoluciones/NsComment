@@ -31,7 +31,7 @@ try {
   exit;
 }
 foreach ($res as $item) {
-  echo $item["from"]["name"]." : ".$item["message"]."<br/>";
+  echo $item["from"]["name"]." : ".$item["message"]." >> ".$item["comment_count"]"<br/>";
 }
 //echo $res[0]["from"]["name"]." : ".$res[0]["message"];
 ?>
