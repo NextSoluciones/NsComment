@@ -17,7 +17,7 @@ $recurso=$id."_".$post;
 $fb2->setDefaultAccessToken($_SESSION['facebook_access_token']);
 try {
   $response = $fb2->get('/'.$recurso.'/comments');
-  $postNode = $response->getGraphUser();
+  //$postNode = $response->getGraphUser();
 } catch(Facebook\Exceptions\FacebookResponseException $e) {
   // When Graph returns an error
   echo 'Graph returned an error: ' . $e->getMessage();
@@ -27,5 +27,5 @@ try {
   echo 'Facebook SDK returned an error: ' . $e->getMessage();
   exit;
 }
-var_dump($postNode);
+var_dump($response);
 ?>
