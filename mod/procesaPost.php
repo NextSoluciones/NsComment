@@ -30,5 +30,5 @@ try {
   echo 'Facebook SDK returned an error: ' . $e->getMessage();
   exit;
 }
-var_dump($res);
+echo $res[0]["from"]["name"];
 ?>
