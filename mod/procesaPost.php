@@ -17,7 +17,7 @@ $recurso=$id."_".$post;
 $fb2->setDefaultAccessToken($_SESSION['facebook_access_token']);
 try {
   $response = $fb2->get('/'.$recurso.'/comments');
-  $postNode = $response->getGraphNode();
+  $postNode = $response->getGraphEdge();
 } catch(Facebook\Exceptions\FacebookResponseException $e) {
   // When Graph returns an error
   echo 'Graph returned an error: ' . $e->getMessage();
