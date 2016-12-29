@@ -27,5 +27,6 @@ try {
   echo 'Facebook SDK returned an error: ' . $e->getMessage();
   exit;
 }
-echo $postNode["items"][0];
+$items=$postNode->getItems();
+var_dump($items);
 ?>
