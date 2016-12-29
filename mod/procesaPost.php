@@ -6,4 +6,5 @@ require_once __DIR__ . './../vendor/autoload.php';
 
 $post=$_POST['id_post'];
 echo $post;
+echo "<br/>flag";
 ?>
