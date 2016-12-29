@@ -20,9 +20,10 @@ try {
   $postNode = $response->getGraphEdge();
   foreach ($postNode as $nodo) {
       echo "<p>Prueba<br/>";
-      $item=$nodo("item");
-      var_dump($item);
-      $res[]=$nodo->asArray();
+      $vector=$nodo->asArray();
+      $sub=$vector["comment_count"];
+      var_dump($sub);
+      $res[]=$vector;
   }
 } catch(Facebook\Exceptions\FacebookResponseException $e) {
   // When Graph returns an error
