@@ -42,15 +42,13 @@ $fb = new Facebook\Facebook([
 
     echo 'Haz iniciado sesión correctamente como ' . $userNode->getName();
     $_SESSION['logueado'] =true;
-
+    $id=$userNode->getId();
 ?>
 <section>
   <article class="busqueda">
     <form class="formulario" action="procesaPost.php" method="post">
-      <span>Post a procesar (id.): </span><input type="text" name="id_post" value="" placeholder="p.e. 10548577854452"/>
-      <input type="hidden" name="id" value="<?php
-          echo $userNode->getId();
-      ?>">
+      <span>Post a procesar (id.): </span><input type="text" name="id_post" value="" placeholder="p.e. <?=$id?>"/>
+      <input type="hidden" name="id" value="<?=$id?>">
       <input type="submit" value="Procesar">
     </form>
   </article>
