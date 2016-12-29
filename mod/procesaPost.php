@@ -19,8 +19,7 @@ try {
   $response = $fb2->get('/'.$recurso.'/comments');
   $postNode = $response->getGraphEdge();
   foreach ($postNode as $nodo) {
-       $items=$nodo["items"];
-       $res[]=$items->asArray();
+       $res[]=$nodo->asArray();
   }
 } catch(Facebook\Exceptions\FacebookResponseException $e) {
   // When Graph returns an error
