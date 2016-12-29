@@ -16,7 +16,7 @@ $recurso=$id."_".$post;
 $res = [];
 $fb2->setDefaultAccessToken($_SESSION['facebook_access_token']);
 try {
-  $response = $fb2->get('/'.$recurso.'/comments');
+  $response = $fb2->get('/'.$recurso.'/comments?fields=from,message,comment_count');
   $postNode = $response->getGraphEdge();
   foreach ($postNode as $nodo) {
        $res[]=$nodo->asArray();
