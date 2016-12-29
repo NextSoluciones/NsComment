@@ -47,7 +47,7 @@ $fb = new Facebook\Facebook([
 <section>
   <article class="busqueda">
     <form class="formulario" action="procesaPost.php" method="post">
-      <input type="text" name="id_post" value="Post a procesar (id.): " placeholder="p.e. 10548577854452"/>
+      <span>Post a procesar (id.): </span><input type="text" name="id_post" value="" placeholder="p.e. 10548577854452"/>
       <input type="submit" value="Procesar">
     </form>
   </article>
