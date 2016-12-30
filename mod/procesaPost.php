@@ -36,22 +36,18 @@ while ($flag > 0) {
           $cola[$iterator]=$vector["id"];
         }
         $res[]=$vector;
-        $flag--;
-        echo "<br/>flag:  ".$flag."<br/>";
     }
   } catch(Facebook\Exceptions\FacebookResponseException $e) {
     // When Graph returns an error
     echo 'Graph returned an error: ' . $e->getMessage();
-    $flag--;
-    echo "<br/>flag:  ".$flag." Debido a error 1<br/>";
     exit;
   } catch(Facebook\Exceptions\FacebookSDKException $e) {
     // When validation fails or other local issues
     echo 'Facebook SDK returned an error: ' . $e->getMessage();
-    $flag--;
-    echo "<br/>flag:  ".$flag." Debido a error 2<br/>";
     exit;
   }
+  $flag--;
+  echo "<br/>flag:  ".$flag."<br/>";
 }
 
 var_dump($cola);
