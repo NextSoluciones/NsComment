@@ -22,7 +22,7 @@ $cola = [];
 $cola[0]=$recurso;
 
 while ($flag > 0) {
-  echo "<br/>Ciclo ".$iterator."<br/>";
+  //echo "<br/>Ciclo ".$iterator."<br/>";
   try {
     $response = $fb2->get('/'.$cola[$iterator].'/comments?fields=from,message,comment_count');
     $postNode = $response->getGraphEdge();
@@ -47,11 +47,11 @@ while ($flag > 0) {
     exit;
   }
   $flag--;
-  echo "<br/>flag:  ".$flag."<br/>";
+  //echo "<br/>flag:  ".$flag."<br/>";
 }
 
-var_dump($cola);
-echo "<br/>";
+//var_dump($cola);
+//echo "<br/>";
 foreach ($res as $item) {
   echo $item["from"]["name"]." : ".$item["message"]." >> ".$item["comment_count"]."<br/>";
 }
