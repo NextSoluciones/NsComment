@@ -49,7 +49,7 @@ while ($flag > 0) {
   }
 }
 
-//var_dump($res);
+var_dump($cola);
 foreach ($res as $item) {
   echo $item["from"]["name"]." : ".$item["message"]." >> ".$item["comment_count"]."<br/>";
 }
