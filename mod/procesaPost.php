@@ -22,7 +22,7 @@ $cola = [];
 $cola[0]=$recurso;
 
 while ($flag > 0) {
-  echo "<br/> Ciclo ".$iterator;
+  echo "<br/>Ciclo ".$iterator."<br/>";
   try {
     $response = $fb2->get('/'.$cola[$iterator].'/comments?fields=from,message,comment_count');
     $postNode = $response->getGraphEdge();
