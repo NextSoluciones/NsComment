@@ -22,7 +22,7 @@ class ExtraeMail{
         $indice[]=$i;
       }
     }
-    //$this->debug.="Comprobando indicador 1 ...<br/>";
+    $this->debug.="Comprobando indicador 1 ...<br/>";
     foreach ($indice as $caso) {
       $subcadena=$procesa1[$caso];
       $sub=explode("@",$subcadena);
