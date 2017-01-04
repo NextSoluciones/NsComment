@@ -59,7 +59,8 @@ foreach ($res as $item) {
   $comentario=$item["message"]."";
   echo "<br/>".$comentario."<br/>";
   echo $data->debug();
-  //$data->Extraer($comentario);
+  $data->Extraer($comentario);
+  echo $data->debug();
   // $correos=$data->getCorreos();
   // $m=count($correos);
   // for ($i=0; $i < $m; $i++) {
