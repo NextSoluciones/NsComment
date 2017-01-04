@@ -57,16 +57,16 @@ while ($flag > 0) {
 foreach ($res as $item) {
   $comentario=$item["message"];
   try {
-    $res=$data->Extraer("hola@meaburri.com");
+    $res=$data->Extraer($comentario);
   } catch (Exception $e) {
     echo "<br/>Excepción: ".$e."<br/>";
   }
 
-  echo "Debugg: ".$data->debug();
-  // $correos=$data->getCorreos();
-  // $m=count($correos);
-  // for ($i=0; $i < $m; $i++) {
-  //   echo $item["from"]["name"]." : ".$correos[$i]."<br/>";
-  // }
+  //echo "Debugg: ".$data->debug();
+  $correos=$data->getCorreos();
+  $m=count($correos);
+  for ($i=0; $i < $m; $i++) {
+    echo $item["from"]["name"]." : ".$correos[$i]."<br/>";
+  }
 }
 ?>
