@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>nscomment</title>
+    <link rel="stylesheet" href="./index.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet">
+  </head>
+  <body>
+    <h1>Gestion de Comentarios</h1>
 <?php
 //error_reporting(E_ALL);
 //ini_set('display_errors', '1');
@@ -65,8 +75,15 @@ foreach ($res as $item) {
   //echo "Debugg: ".$data->debug();
   $correos=$data->getCorreos();
   $m=count($correos);
+  echo "<div class='datagrid'><table><thead><tr><th>Usuario</th><th>Correo</th></tr></thead><tbody>";
   for ($i=0; $i < $m; $i++) {
-    echo $item["from"]["name"]." : ".$correos[$i]."<br/>";
+    echo "<tr><td>".$item["from"]["name"]."</td><td>".$correos[$i]."</td></tr>";
   }
+  echo "</tbody></table></div>";
 }
 ?>
+<footer><ul id="pie">
+  <li>Desarrollado por <a href="https://www.nslatino.com">Next Soluciones Inform&aacute;ticas</a> - Todos los derechos reservdos</li>
+</ul></footer>
+</body>
+</html>
