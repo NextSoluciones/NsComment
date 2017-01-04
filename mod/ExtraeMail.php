@@ -50,9 +50,9 @@ class ExtraeMail{
               $this->bool_tld2=false;
             }
           }
-      }/*
+      }
       $cadena_2=$host[1];
-      $n2=strlen($cadena_2);
+      $n2=strlen($cadena_2);//punto de control - ok
       for ($i=0; $i < $n2; $i++) {
         $temp=substr($cadena_2,0,($i+1));
         if (ctype_alpha($temp)) {
@@ -62,6 +62,7 @@ class ExtraeMail{
           $this->bool_tld2=false;
         }
       }
+      /*
       $usuario;
       $iterator=1;
       $start=-1;
