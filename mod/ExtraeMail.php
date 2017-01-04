@@ -71,10 +71,10 @@ class ExtraeMail{
         $temp=substr($user,$start);
         $temp2=$temp."@dominio.tld";
         $start--;
-        if (filter_var($temp2, FILTER_VALIDATE_EMAIL)) {
+        /*if (filter_var($temp2, FILTER_VALIDATE_EMAIL)) {
           $usuario=$temp;
           $iterator++;
-        }
+        }*/
         $iterator--;
       }        //punto de control --error
       /*
