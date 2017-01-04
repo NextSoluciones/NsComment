@@ -52,14 +52,14 @@ while ($flag > 0) {
 //echo "<br/>";
 
 include "./ExtraeMail.php";
-$data=new ExtraeMail();
 foreach ($res as $item) {
   echo "<p>";
   var_dump($item);
   echo "</p>";
   $comentario=$item["message"]."";
   echo "<br/>".$comentario."<br/>";
-  //echo $data->Extraer($comentario);
+  $data=new ExtraeMail();
+  $data->Extraer($comentario);
   // $correos=$data->getCorreos();
   // $m=count($correos);
   // for ($i=0; $i < $m; $i++) {
