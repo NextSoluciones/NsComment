@@ -15,13 +15,14 @@ class ExtraeMail{
     $procesa1=explode(" ",$cad);
     $n1=count($procesa1);
     $indice=[];
-/*
+
     for ($i=0; $i < $n1; $i++) {
       $pos=strpos($procesa1[$i],'@');
       if (!($pos==false)) {
         $indice[]=$i;
       }
     }
+    /*
     foreach ($indice as $caso) {
       $subcadena=$procesa1[$caso];
       $sub=explode("@",$subcadena);
