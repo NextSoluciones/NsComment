@@ -15,14 +15,13 @@ class ExtraeMail{
     $procesa1=explode(" ",$cad);
     $n1=count($procesa1);
     $indice=[];
-
+/*
     for ($i=0; $i < $n1; $i++) {
       $pos=strpos($procesa1[$i],'@');
       if (!($pos==false)) {
         $indice[]=$i;
       }
     }
-    //$this->debug.="Comprobando indicador 1 ...<br/>";
     foreach ($indice as $caso) {
       $subcadena=$procesa1[$caso];
       $sub=explode("@",$subcadena);
@@ -62,7 +61,6 @@ class ExtraeMail{
           $this->bool_tld2=false;
         }
       }
-      /*Ahora obtendremos el usuario del correo;*/
       $usuario;
       $iterator=1;
       $start=-1;
@@ -82,10 +80,9 @@ class ExtraeMail{
         $correoFinal.=".".$this->tld2;
       }
       if (filter_var($correoFinal, FILTER_VALIDATE_EMAIL)) {
-        //$this->debug.="Correo ".$correoFinal."<br/>";
         $this->correos[]=$correoFinal;
       }
-    }
+    }*/
   }
 }
 ?>
