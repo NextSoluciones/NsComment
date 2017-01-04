@@ -72,14 +72,9 @@ class ExtraeMail{
           $temp=substr($user,$start);
           $temp2=$temp."@dominio.tld";
           $start--;
-          $this->debug.="<br/>temp=".$temp."<br/>";
-          $this->debug.="<br/>temp2=".$temp2."<br/>";
-          $this->debug.="<br/>start=".$start."<br/>";
-          $this->debug.="<br/>iterator-pre=".$iterator."<br/>";
             if (filter_var($temp2, FILTER_VALIDATE_EMAIL)) {
               $usuario=$temp;
               $iterator++;
-              $this->debug.="<br/>iterator-post=".$iterator."<br/>";
             }
           $iterator--;
         }
