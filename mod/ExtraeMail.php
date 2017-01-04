@@ -63,11 +63,11 @@ class ExtraeMail{
         }
       }//punto de control - ok
 
-      /*$usuario;
+      $usuario="";
       $iterator=1;
       $start=-1;
-      $user=$sub[0];*/
-      while ($iterator > 0) {
+      $user=$sub[0];
+      /*while ($iterator > 0) {
         $temp=substr($user,$start);
         $temp2=$temp."@dominio.tld";
         $start--;
@@ -76,7 +76,7 @@ class ExtraeMail{
           $iterator++;
         }
         $iterator--;
-      }//punto de control --error
+      }*/         //punto de control --error
       /*
       $correoFinal=$usuario."@".$host[0].".".$this->tld1;
       if ($this->bool_tld2) {
@@ -84,8 +84,8 @@ class ExtraeMail{
       }
       if (filter_var($correoFinal, FILTER_VALIDATE_EMAIL)) {
         $this->correos[]=$correoFinal;
-      }
-      */
+      }*/
+
     }
   }
 }
