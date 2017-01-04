@@ -68,6 +68,7 @@ class ExtraeMail{
       $start=-1;
       $user=$sub[0];
       $control=0;
+      $nuser=strlen($user);
       #Parece que entra en un bucle infinito. Poner un control que limite a 10
       $this->debug.="<br/>iterator inicial: ".$iterator."<br/>";
       $this->debug.="<br/>start inicial: ".$start."<br/>";
@@ -91,6 +92,9 @@ class ExtraeMail{
               $this->debug.="<br/>user: ".$user."<br/>";
               $iterator++;
               $this->debug.="<br/>iterator: ".$iterator."<br/>";
+              if ($nuser==abs($start)) {
+                $iterator--;
+              }
             }
           $iterator--;
           $this->debug.="<br/>******DECRECE ITERATOR*********<br/>";
