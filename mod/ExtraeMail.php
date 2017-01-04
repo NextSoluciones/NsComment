@@ -74,9 +74,11 @@ class ExtraeMail{
         $this->debug.="<br/>temp=".$temp."<br/>";
         $this->debug.="<br/>temp2=".$temp2."<br/>";
         $this->debug.="<br/>start=".$start."<br/>";
+        $this->debug.="<br/>iterator-pre=".$iterator."<br/>";
         if (filter_var($temp2, FILTER_VALIDATE_EMAIL)) {
           $usuario=$temp;
-          //$iterator++;
+          $iterator++;
+          $this->debug.="<br/>iterator-post=".$iterator."<br/>";
         }
         $iterator--;
       }        //punto de control --error
