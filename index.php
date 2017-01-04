@@ -28,7 +28,7 @@
     }
 
     $helper = $fb->getRedirectLoginHelper();
-    $permissions = ['email', 'user_likes', 'manage_pages']; // optional
+    $permissions = ['user_photos', 'user_videos', 'user_friends', 'user_status', 'user_tagged_places', 'user_posts', 'email', 'manage_pages', 'read_custom_friendlists', 'public_profile', 'basic_info']; // optional
     $loginUrl = $helper->getLoginUrl('https://www.nslatino.com/nscomment/login/procesaLogin.php', $permissions);
     echo '<a href="' . $loginUrl . '"><img id="fb-login" src="assets/fb_login.png" alt="Iniciar Sesion con Facebook" /></a>';
     ?>
