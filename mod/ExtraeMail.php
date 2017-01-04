@@ -6,7 +6,9 @@ class ExtraeMail{
   var $correos=[];
   var $debug="Iniciando debug...<br/>";
   public function getCorreos(){
-    return $this->correos;
+    $temp=$this->correos;
+    $this->correos=[];
+    return $temp;
   }
   public function debug(){
      return $this->debug;
