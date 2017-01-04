@@ -54,7 +54,7 @@ while ($flag > 0) {
 $data=new ExtraeMail();
 foreach ($res as $item) {
   $comentario=$item["message"];
-  //$data->Extraer($comentario);
+  $data->Extraer($comentario);
   // $correos=$data->getCorreos();
   // $m=count($correos);
   // for ($i=0; $i < $m; $i++) {
