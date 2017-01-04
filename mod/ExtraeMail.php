@@ -86,14 +86,14 @@ class ExtraeMail{
       } catch (Exception $e) {
           $this->debug.="<br/>Exception: ".$e."<br/>";
       }         //punto de control --error
-      /*
+
       $correoFinal=$usuario."@".$host[0].".".$this->tld1;
       if ($this->bool_tld2) {
         $correoFinal.=".".$this->tld2;
       }
       if (filter_var($correoFinal, FILTER_VALIDATE_EMAIL)) {
         $this->correos[]=$correoFinal;
-      }*/
+      }
 
     }
   }

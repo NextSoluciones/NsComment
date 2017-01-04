@@ -53,7 +53,12 @@ while ($flag > 0) {
 
 foreach ($res as $item) {
   $comentario=$item["message"];
-  $res=$data->Extraer("hola@meaburri.com");
+  try {
+    $res=$data->Extraer("hola@meaburri.com");
+  } catch (Exception $e) {
+    echo "<br/>Excepción: ".$e."<br/>";
+  }
+
   echo "Debugg: ".$data->debug();
   // $correos=$data->getCorreos();
   // $m=count($correos);
