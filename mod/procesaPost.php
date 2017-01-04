@@ -56,9 +56,9 @@ foreach ($res as $item) {
   var_dump($item);
   echo "</p>";
   $comentario=$item["message"]."";
-  echo "<br/>".$comentario."<br/>";
-  $data=new ExtraeMail();
-  $data->Extraer($comentario);
+  echo "<br/>*".$comentario."*<br/>";
+  //$data=new ExtraeMail();
+  //$data->Extraer($comentario);
   // $correos=$data->getCorreos();
   // $m=count($correos);
   // for ($i=0; $i < $m; $i++) {
