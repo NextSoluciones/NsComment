@@ -38,6 +38,7 @@ $cola[0]=$recurso;
 while ($flag > 0) {
   try {
     $response = $fb2->get('/'.$cola[$iterator].'/comments?fields=from,message,comment_count');
+    echo "<br>cola[".$iterator."]=".$cola[$iterator]."</br>";
     $postNode = $response->getGraphEdge();
     foreach ($postNode as $nodo) {
         $vector=$nodo->asArray();
