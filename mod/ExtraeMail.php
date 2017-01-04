@@ -67,25 +67,25 @@ class ExtraeMail{
       $iterator=1;
       $start=-1;
       $user=$sub[0];
-      while ($iterator > 0) {
-        $temp=substr($user,$start);
-        $temp2=$temp."@dominio.tld";
-        $start--;
-        $this->debug.="<br/>temp=".$temp."<br/>";
-        $this->debug.="<br/>temp2=".$temp2."<br/>";
-        $this->debug.="<br/>start=".$start."<br/>";
-        $this->debug.="<br/>iterator-pre=".$iterator."<br/>";
-        try {
-          if (filter_var($temp2, FILTER_VALIDATE_EMAIL)) {
-            $usuario=$temp;
-            $iterator++;
-            $this->debug.="<br/>iterator-post=".$iterator."<br/>";
-          }
-        } catch (Exception $e) {
+      try {
+        while ($iterator > 0) {
+          $temp=substr($user,$start);
+          $temp2=$temp."@dominio.tld";
+          $start--;
+          $this->debug.="<br/>temp=".$temp."<br/>";
+          $this->debug.="<br/>temp2=".$temp2."<br/>";
+          $this->debug.="<br/>start=".$start."<br/>";
+          $this->debug.="<br/>iterator-pre=".$iterator."<br/>";
+            if (filter_var($temp2, FILTER_VALIDATE_EMAIL)) {
+              $usuario=$temp;
+              $iterator++;
+              $this->debug.="<br/>iterator-post=".$iterator."<br/>";
+            }
+          $iterator--;
+        }
+      } catch (Exception $e) {
           $this->debug.="<br/>Exception: ".$e."<br/>";
-        } 
-        $iterator--;
-      }        //punto de control --error
+      }         //punto de control --error
       /*
       $correoFinal=$usuario."@".$host[0].".".$this->tld1;
       if ($this->bool_tld2) {
