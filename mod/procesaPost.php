@@ -38,7 +38,7 @@ $icomment=0;
 while ($flag > 0) {
   try {
     $response = $fb2->get('/'.$cola[$icomment].'/comments?fields=from,message,comment_count');
-    echo "<br>cola[".$icomment."]=".$cola[$icomment]."</br>";
+    //echo "<br>cola[".$icomment."]=".$cola[$icomment]."</br>";
     $postNode = $response->getGraphEdge();
     foreach ($postNode as $nodo) {
         $vector=$nodo->asArray();
@@ -66,7 +66,7 @@ while ($flag > 0) {
 
 //var_dump($cola);
 //echo "<br/>";
-var_dump($res);
+//var_dump($res);
 echo "<div class='datagrid'><table><thead><tr><th>Usuario</th><th>Correo</th></tr></thead><tbody>";
 foreach ($res as $item) {
   $comentario=$item["message"];
