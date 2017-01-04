@@ -49,6 +49,10 @@ footer a{
   text-decoration: none;
   color: #B2B24D;
 }
+footer li{
+  font-family: 'Lato', sans-serif;
+  color: #B2B24D;
+}
 footer a:hover{
   color: #D9ECFA;
 }
