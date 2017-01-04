@@ -92,7 +92,7 @@ class ExtraeMail{
         //      $this->debug.="<br/>user: ".$user."<br/>";
               $iterator++;
         //      $this->debug.="<br/>iterator: ".$iterator."<br/>";
-              if ($nuser==abs($start)) {
+              if ($nuser==(abs($start)+1)) {
                 $iterator--;
               }
             }
