@@ -34,11 +34,11 @@ $flag=1;
 $iterator=0;
 $cola = [];
 $cola[0]=$recurso;
-
+$icomment=0;
 while ($flag > 0) {
   try {
-    $response = $fb2->get('/'.$cola[$iterator].'/comments?fields=from,message,comment_count');
-    //echo "<br>cola[".$iterator."]=".$cola[$iterator]."</br>";
+    $response = $fb2->get('/'.$cola[$icomment].'/comments?fields=from,message,comment_count');
+    echo "<br>cola[".$iterator."]=".$cola[$iterator]."</br>";
     $postNode = $response->getGraphEdge();
     foreach ($postNode as $nodo) {
         $vector=$nodo->asArray();
@@ -47,10 +47,11 @@ while ($flag > 0) {
           $iterator++;
           $flag++;
           $cola[$iterator]=$vector["id"];
-          echo "<br>cola[".$iterator."]=".$cola[$iterator]."</br>";
+          //echo "<br>cola[".$iterator."]=".$cola[$iterator]."</br>";
         }
         $res[]=$vector;
     }
+    $icomment++;
   } catch(Facebook\Exceptions\FacebookResponseException $e) {
     // When Graph returns an error
     echo 'Graph returned an error: ' . $e->getMessage();
