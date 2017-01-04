@@ -1,5 +1,6 @@
 <?php
 session_start();
+include "./ExtraeMail.php";
 include "./../bin/config.php";
 require_once __DIR__ . './../vendor/autoload.php';
 $accesso= new Config();
@@ -50,15 +51,10 @@ while ($flag > 0) {
 //var_dump($cola);
 //echo "<br/>";
 
-include "./ExtraeMail.php";
+$data=new ExtraeMail();
 foreach ($res as $item) {
-  echo "<p>";
-  var_dump($item);
-  echo "</p>";
-  $comentario=$item["message"]."";
-  echo "<br/>*".$comentario."*<br/>";
-  //$data=new ExtraeMail();
-  //$data->Extraer($comentario);
+  $comentario=$item["message"];  
+  $data->Extraer($comentario);
   // $correos=$data->getCorreos();
   // $m=count($correos);
   // for ($i=0; $i < $m; $i++) {
