@@ -22,7 +22,6 @@ $cola = [];
 $cola[0]=$recurso;
 
 while ($flag > 0) {
-  //echo "<br/>Ciclo ".$iterator."<br/>";
   try {
     $response = $fb2->get('/'.$cola[$iterator].'/comments?fields=from,message,comment_count');
     $postNode = $response->getGraphEdge();
@@ -32,7 +31,6 @@ while ($flag > 0) {
         if ($sub > 0) {
           $iterator++;
           $flag++;
-          echo "<br/>flag:  ".$flag."<br/>";
           $cola[$iterator]=$vector["id"];
         }
         $res[]=$vector;
@@ -55,12 +53,14 @@ while ($flag > 0) {
 include "./ExtraeMail.php";
 $data=new ExtraeMail();
 foreach ($res as $item) {
-  $data->Extraer($item["message"]);
-  $correos=$data->getCorreos();
-  $m=count($correos);
-  for ($i=0; $i < $m; $i++) {
-    echo $item["from"]["name"]." : ".$correos[$i]."<br/>";
-  }
+  echo "<p>";
+  var_dump($item);
+  echo "</p>";
+  // $data->Extraer($item["message"]);
+  // $correos=$data->getCorreos();
+  // $m=count($correos);
+  // for ($i=0; $i < $m; $i++) {
+  //   echo $item["from"]["name"]." : ".$correos[$i]."<br/>";
+  // }
 }
-//echo $res[0]["from"]["name"]." : ".$res[0]["message"];
 ?>
