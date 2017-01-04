@@ -1,6 +1,5 @@
 <?php
 session_start();
-echo phpinfo();
 include "./../bin/config.php";
 require_once __DIR__ . './../vendor/autoload.php';
 $accesso= new Config();
