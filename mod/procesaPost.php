@@ -47,7 +47,6 @@ while ($flag > 0) {
     exit;
   }
   $flag--;
-  //echo "<br/>flag:  ".$flag."<br/>";
 }
 
 //var_dump($cola);
