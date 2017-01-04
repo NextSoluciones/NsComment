@@ -1,10 +1,10 @@
 <?php
-require_once "ExtraeMail.php";
 session_start();
 include "./../bin/config.php";
+require_once "ExtraeMail.php";
 require_once __DIR__ . './../vendor/autoload.php';
 $accesso= new Config();
-
+$data=new ExtraeMail();
 $fb2 = new Facebook\Facebook([
   'app_id' => $accesso->get_id(),
   'app_secret' => $accesso->get_secret(),
@@ -51,7 +51,6 @@ while ($flag > 0) {
 //var_dump($cola);
 //echo "<br/>";
 
-$data=new ExtraeMail();
 foreach ($res as $item) {
   $comentario=$item["message"];
   $res=$data->Extraer($comentario);
