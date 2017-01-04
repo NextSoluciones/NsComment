@@ -63,6 +63,7 @@ while ($flag > 0) {
 
 //var_dump($cola);
 //echo "<br/>";
+var_dump($item["message"]);
 echo "<div class='datagrid'><table><thead><tr><th>Usuario</th><th>Correo</th></tr></thead><tbody>";
 foreach ($res as $item) {
   $comentario=$item["message"];
