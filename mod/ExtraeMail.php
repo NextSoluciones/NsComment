@@ -4,13 +4,13 @@ class ExtraeMail{
   var $tld2;
   var $bool_tld2;
   var $correos=[];
-  //var $debug="Iniciando debug...<br/>";
+  var $debug="Iniciando debug...<br/>";
   public function getCorreos(){
     return $this->correos;
   }
-  // public function debug(){
-  //   return $this->debug;
-  // }
+  public function debug(){
+     return $this->debug;
+  }
   public function Extraer($cad){
     $procesa1=explode(" ",$cad);
     $n1=count($procesa1);
@@ -71,6 +71,9 @@ class ExtraeMail{
         $temp=substr($user,$start);
         $temp2=$temp."@dominio.tld";
         $start--;
+        $this->debug.="<br/>temp=".$temp."<br/>";
+        $this->debug.="<br/>temp2=".$temp2."<br/>";
+        $this->debug.="<br/>start=".$start."<br/>";
         /*if (filter_var($temp2, FILTER_VALIDATE_EMAIL)) {
           $usuario=$temp;
           $iterator++;

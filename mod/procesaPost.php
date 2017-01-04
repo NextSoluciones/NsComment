@@ -54,6 +54,7 @@ while ($flag > 0) {
 foreach ($res as $item) {
   $comentario=$item["message"];
   $res=$data->Extraer("hola@meaburri.com");
+  echo "Debugg: ".$data->debug();
   // $correos=$data->getCorreos();
   // $m=count($correos);
   // for ($i=0; $i < $m; $i++) {
