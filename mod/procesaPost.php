@@ -1,5 +1,5 @@
 <?php
-include "./ExtraeMail.php";
+require_once "ExtraeMail.php";
 session_start();
 include "./../bin/config.php";
 require_once __DIR__ . './../vendor/autoload.php';
