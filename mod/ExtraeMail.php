@@ -4,13 +4,13 @@ class ExtraeMail{
   var $tld2;
   var $bool_tld2;
   var $correos=[];
-  //var $debug="Iniciando debug...<br/>";
+  var $debug="Iniciando debug...<br/>";
   public function getCorreos(){
     return $this->correos;
   }
-  // public function debug(){
-  //   return $this->debug;
-  // }
+  public function debug(){
+     return $this->debug;
+  }
   public function Extraer($cad){
     $procesa1=explode(" ",$cad);
     $n1=count($procesa1);
