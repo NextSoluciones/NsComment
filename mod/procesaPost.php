@@ -53,7 +53,7 @@ while ($flag > 0) {
 
 foreach ($res as $item) {
   $comentario=$item["message"];
-  $res=$data->debug();
+  $res=$data->Extraer($comentario);
   // $correos=$data->getCorreos();
   // $m=count($correos);
   // for ($i=0; $i < $m; $i++) {
