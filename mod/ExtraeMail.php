@@ -67,8 +67,10 @@ class ExtraeMail{
       $iterator=1;
       $start=-1;
       $user=$sub[0];
-      try {
-        while ($iterator > 0) {
+      $control=0;
+      #Parece que entra en un bucle infinito. Poner un control que limite a 10
+      while ($iterator > 0&& $control<10) {
+          $control++;
           $temp=substr($user,$start);
           $temp2=$temp."@dominio.tld";
           $start--;
@@ -78,9 +80,7 @@ class ExtraeMail{
             }
           $iterator--;
         }
-      } catch (Exception $e) {
-          $this->debug.="<br/>Exception: ".$e."<br/>";
-      }         //punto de control --error
+      //punto de control --error
 
       $correoFinal=$usuario."@".$host[0].".".$this->tld1;
       if ($this->bool_tld2) {
