@@ -1,6 +1,8 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
 session_start();
-ini_set('error_reporting', E_ALL);
+
 include "./../bin/config.php";
 require_once "ExtraeMail.php";
 require_once __DIR__ . './../vendor/autoload.php';
