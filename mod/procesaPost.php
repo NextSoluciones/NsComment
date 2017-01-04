@@ -1,6 +1,6 @@
 <?php
+include "./ExtraeMail.php";
 session_start();
-require_once "./ExtraeMail.php";
 include "./../bin/config.php";
 require_once __DIR__ . './../vendor/autoload.php';
 $accesso= new Config();
