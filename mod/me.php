@@ -54,8 +54,7 @@ $fb = new Facebook\Facebook([
   </article>
 </section>
 <footer><ul id="pie">
-  <li><a href="./../legal.html">Avisos Legales y Pol&iacute;tica de Privacidad</a></li>
-  <li><a href="./../terminos.html">T&eacute;rminos y Condiciones</a></li>
+  <li>Desarrollado por <a href="https://www.nslatino.com">Next Soluciones Inform&aacute;ticas</a> Todos los derechos reservdos</li>
 </ul></footer>
 </body>
 </html>

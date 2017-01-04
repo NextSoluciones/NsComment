@@ -52,8 +52,16 @@ while ($flag > 0) {
 
 //var_dump($cola);
 //echo "<br/>";
+
+include "./ExtraeMail.php";
+$data=new ExtraeMail();
 foreach ($res as $item) {
-  echo $item["from"]["name"]." : ".$item["message"]." >> ".$item["comment_count"]."<br/>";
+  $data->Extraer($item["message"]);
+  $correos=$data->getCorreos();
+  $m=count($correos);
+  for ($i=0; $i < $m; $i++) {
+    echo $item["from"]["name"]." : ".$correos[$i]."<br/>";
+  }
 }
 //echo $res[0]["from"]["name"]." : ".$res[0]["message"];
 ?>
