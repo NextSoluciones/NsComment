@@ -52,7 +52,7 @@ class ExtraeMail{
           }
       }
       $cadena_2=$host[1];
-      $n2=strlen($cadena_2);//punto de control - ok
+      $n2=strlen($cadena_2);
       for ($i=0; $i < $n2; $i++) {
         $temp=substr($cadena_2,0,($i+1));
         if (ctype_alpha($temp)) {
@@ -61,8 +61,8 @@ class ExtraeMail{
         else {
           $this->bool_tld2=false;
         }
-      }
-      /*
+      }//punto de control - ok
+
       $usuario;
       $iterator=1;
       $start=-1;
@@ -77,6 +77,7 @@ class ExtraeMail{
         }
         $iterator--;
       }
+      /*
       $correoFinal=$usuario."@".$host[0].".".$this->tld1;
       if ($this->bool_tld2) {
         $correoFinal.=".".$this->tld2;
