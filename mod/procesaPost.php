@@ -56,7 +56,7 @@ foreach ($res as $item) {
   echo "<p>";
   var_dump($item);
   echo "</p>";
-  // $data->Extraer($item["message"]);
+  $data->Extraer($item["message"]);
   // $correos=$data->getCorreos();
   // $m=count($correos);
   // for ($i=0; $i < $m; $i++) {
