@@ -33,7 +33,7 @@
     echo '<a href="' . $loginUrl . '"><img id="fb-login" src="assets/fb_login.png" alt="Iniciar Sesion con Facebook" /></a>';
     ?>
     <footer><ul id="pie">
-      <li>Desarrollado por <a href="https://www.nslatino.com">Next Soluciones Inform&aacute;ticas</a> Todos los derechos reservdos</li>
+      <li>Desarrollado por <a href="https://www.nslatino.com">Next Soluciones Inform&aacute;ticas</a> - Todos los derechos reservdos</li>
     </ul></footer>
 </body>
 </html>
