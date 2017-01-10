@@ -67,7 +67,7 @@ while ($flag > 0) {
 //var_dump($cola);
 //echo "<br/>";
 //var_dump($res);
-echo "<form id='formH' action='descargar.php' method='post'><input type='submit' value='Descargar'>";
+echo "<form id='formH' action='descargar.php' method='post'><input type='submit' value='Descargar'><br/>";
 echo "<div class='datagrid'><table><thead><tr><th>Usuario</th><th>Correo</th></tr></thead><tbody>";
 foreach ($res as $item) {
   $comentario=$item["message"];
