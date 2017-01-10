@@ -67,6 +67,7 @@ while ($flag > 0) {
 //var_dump($cola);
 //echo "<br/>";
 //var_dump($res);
+echo "<form id='formH' action='descargar.php' method='post'><input type='submit' value='Descargar'>";
 echo "<div class='datagrid'><table><thead><tr><th>Usuario</th><th>Correo</th></tr></thead><tbody>";
 foreach ($res as $item) {
   $comentario=$item["message"];
@@ -80,9 +81,11 @@ foreach ($res as $item) {
   $m=count($correos);
   for ($i=0; $i < $m; $i++) {
     echo "<tr><td>".$item["from"]["name"]."</td><td>".$correos[$i]."</td></tr>";
+    echo "<input type='hidden' name='registro[]' value='".$item["from"]["name"].",".$correos[$i]."\n'>";
   }
 }
 echo "</tbody></table></div>";
+echo "</form>";
 ?>
 <footer><ul id="pie">
   <li>Desarrollado por <a href="https://www.nslatino.com">Next Soluciones Inform&aacute;ticas</a> - Todos los derechos reservdos</li>
