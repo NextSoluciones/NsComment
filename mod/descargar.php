@@ -5,7 +5,7 @@ if ( !empty($_POST["registro"]) && is_array($_POST["registro"]) ) {
     header('Content-type: text/plain');
     header("Content-Disposition: attachment; filename=\"facebook$id.csv\"");
     foreach ( $_POST["registro"] as $registro ) {
-            print utf8_encode($registro);
+            print utf8_decode($registro);
      }
 }
 ?>
