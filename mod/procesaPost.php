@@ -25,7 +25,7 @@ $fb2 = new Facebook\Facebook([
 ]);
 
 $post=$_POST['id_post'];
-$id=$_POST['id'];
+$id=$_POST['fanpage'];
 $recurso=$id."_".$post;
 $res = [];
 $fb2->setDefaultAccessToken($_SESSION['facebook_access_token']);
