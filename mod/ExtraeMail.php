@@ -92,10 +92,10 @@ class ExtraeMail{
         //      $this->debug.="<br/>******CONDICIONAL FILTRO*********<br/>";
               $usuario=$temp;
         //      $this->debug.="<br/>user: ".$user."<br/>";
-              $iterator++;
+              $iterator--;
         //      $this->debug.="<br/>iterator: ".$iterator."<br/>";
               if (($nuser+1)==abs($start)) {
-                $iterator--;
+                $iterator++;
               }
             }
           $iterator--;
