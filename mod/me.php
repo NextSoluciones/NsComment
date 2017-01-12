@@ -32,7 +32,7 @@ $fb = new Facebook\Facebook([
       $userNode = $response->getGraphUser();
       $fanpage=$response->getGraphNode();
       $fanp[]=$fanpage->asArray();
-      $fanpL2=$fanp["accounts"];
+      $fanpL2=$fanp[0]["accounts"];
     } catch(Facebook\Exceptions\FacebookResponseException $e) {
       // When Graph returns an error
       echo 'Graph returned an error: ' . $e->getMessage();
