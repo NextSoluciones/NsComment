@@ -24,12 +24,13 @@ $fb2 = new Facebook\Facebook([
   'default_graph_version' => $accesso->get_version()
 ]);
 
-$post=$_POST['id_post'];
 if (isset($_POST['id_fp'])) {
-  $id=$_POST['id_fp']
+  $id=$_POST['id_fp'];
+  $post=$_POST['id_post_fp'];
 }
 else {
   $id=$_POST['fanpage'];
+  $post=$_POST['id_post'];
 }
 $recurso=$id."_".$post;
 $res = [];

@@ -68,7 +68,7 @@ $fb = new Facebook\Facebook([
     <form class="formulario" action="procesaPost.php" method="post">
       <h2>Post P&uacute;blico</h2>
       <span>Ingrese id. de fanpage: </span><input type="text" name="id_fp" value="" placeholder="p.e. <?=$id_fp?>"/>
-      <span>Post a procesar (id.): </span><input type="text" name="id_post" value="" placeholder="p.e. <?=$id?>"/>
+      <span>Post a procesar (id.): </span><input type="text" name="id_post_fp" value="" placeholder="p.e. <?=$id?>"/>
       <input type="submit" value="Procesar">
     </form>
   </article>
