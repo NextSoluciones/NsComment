@@ -19,7 +19,7 @@ class ExtraeMail{
     $indice=[];
 
     for ($i=0; $i < $n1; $i++) {
-      $pos=strpos($procesa1[$i],'@');
+      $pos=strpos($procesa1[$i],'@',0);
       if (!($pos==false)) {
         $indice[]=$i;
       }
