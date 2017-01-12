@@ -30,6 +30,8 @@ $fb = new Facebook\Facebook([
     try {
       $response = $fb->get('/me?fields=id,name,accounts');
       $userNode = $response->getGraphUser();
+      $fanpage=$response->getGraphNode();
+      $fanp[]=$fanpage->asArray();
     } catch(Facebook\Exceptions\FacebookResponseException $e) {
       // When Graph returns an error
       echo 'Graph returned an error: ' . $e->getMessage();
@@ -40,7 +42,9 @@ $fb = new Facebook\Facebook([
       exit;
     }
 
-    echo 'Haz iniciado sesión correctamente como ' . $userNode->getName();
+    echo 'Haz iniciado sesión correctamente como ' . $userNode->getName()."<br/>";
+    var_dump($fanp);
+    echo "<br/>";
     $_SESSION['logueado'] =true;
     $id=$userNode->getId();
 ?>
