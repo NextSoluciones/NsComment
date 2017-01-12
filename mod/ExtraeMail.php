@@ -67,7 +67,7 @@ class ExtraeMail{
 
       $usuario="";
       $iterator=1;
-      $start=-1;
+      $start=0;
       $user=$sub[0];
       $control=0;
       $nuser=strlen($user);
@@ -76,7 +76,7 @@ class ExtraeMail{
       //$this->debug.="<br/>start inicial: ".$start."<br/>";
     //  $this->debug.="<br/>user inicial: ".$user."<br/>";
       //$this->debug.="<br/>control inicial: ".$control."<br/>";
-      while ($iterator > 0&& $control<100) {
+      while ($iterator > 0&& $control<1000) {
       //  $this->debug.="<br/>***********NUEVO CICLO************<br/>";
       //  $this->debug.="<br/>iterator: ".$iterator."<br/>";
       //  $this->debug.="<br/>start: ".$start."<br/>";
@@ -87,7 +87,7 @@ class ExtraeMail{
         //  $this->debug.="<br/>temp: ".$temp."<br/>";
           $temp2=$temp."@dominio.tld";
         //  $this->debug.="<br/>temp2: ".$temp2."<br/>";
-          $start--;
+          $start++;
             if (filter_var($temp2, FILTER_VALIDATE_EMAIL)) {
         //      $this->debug.="<br/>******CONDICIONAL FILTRO*********<br/>";
               $usuario=$temp;
