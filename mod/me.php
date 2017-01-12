@@ -44,14 +44,22 @@ $fb = new Facebook\Facebook([
     }
 
     echo 'Haz iniciado sesión correctamente como ' . $userNode->getName()."<br/>";
-    var_dump($fanpL2);
-    echo "<br/>";
+
     $_SESSION['logueado'] =true;
     $id=$userNode->getId();
 ?>
 <section>
   <article class="busqueda">
     <form class="formulario" action="procesaPost.php" method="post">
+      <span>Selecciona Pagina asociada: </span><select class="fanpage-select" name="fanpage">
+        <?php
+          foreach ($fanpL2 as $fp) {
+            $id=$fp['id'];
+            $nombre=$fp['name'];
+            echo "<option value='$id'>$nombre</option>";
+          }
+        ?>
+      </select>
       <span>Post a procesar (id.): </span><input type="text" name="id_post" value="" placeholder="p.e. <?=$id?>"/>
       <input type="hidden" name="id" value="<?=$id?>">
       <input type="submit" value="Procesar">
