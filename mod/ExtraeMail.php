@@ -53,17 +53,24 @@ class ExtraeMail{
             }
           }
       }
-      $cadena_2=$host[1];
-      $n2=strlen($cadena_2);
-      for ($i=0; $i < $n2; $i++) {
-        $temp=substr($cadena_2,0,($i+1));
-        if (ctype_alpha($temp)) {
-          $this->tld1=$temp;
+      if (isset($host[1])){
+        $cadena_2=$host[1];
+        $n2=strlen($cadena_2);
+        for ($i=0; $i < $n2; $i++) {
+          $temp=substr($cadena_2,0,($i+1));
+          if (ctype_alpha($temp)) {
+            $this->tld1=$temp;
+          }
+          else {
+            $this->bool_tld2=false;
+          }
         }
-        else {
-          $this->bool_tld2=false;
-        }
-      }//punto de control - ok
+      }
+      else {
+        $this->tld1="com";
+      }            
+
+      //punto de control - ok
 
       $usuario="";
       $iterator=1;
