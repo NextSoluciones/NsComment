@@ -82,7 +82,7 @@ foreach ($res as $item) {
   } catch (Exception $e) {
     echo "<br/>Excepción: ".$e."<br/>";
   }
-  //echo "Debugg: ".$data->debug();
+  echo "Debugg: ".$data->debug();
   $correos=$data->getCorreos();
   $m=count($correos);
   for ($i=0; $i < $m; $i++) {
