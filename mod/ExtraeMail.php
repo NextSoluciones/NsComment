@@ -31,14 +31,9 @@ class ExtraeMail{
       $subcadena=$procesa1[$caso];
       $sub=explode("@",$subcadena);
       $host=explode(".",$sub[1]);
-      if (isset($host[0])){
-        $this->debug.=$subcadena." tiene host definido y este es $host[0]<br/>";
-      }
-      else {
-        $this->debug.=$subcadena." no tiene host definido<br/>";
-      }
       if (isset($host[1])&&strlen($host[1])>2){
         $cadena_2=$host[1];
+        $this->debug.="Host2: '".$cadena_2."'";
         $n2=strlen($cadena_2);
         for ($i=0; $i < $n2; $i++) {
           $temp=substr($cadena_2,0,($i+1));
