@@ -23,7 +23,7 @@ class ExtraeMail{
       if (!($pos==false)) {
         $indice[]=$i;
         $cadxx=$procesa1[$i]."<br/>";
-        $this->$debug=$cadxx;
+        $this->debug.=$cadxx;
       }
     }
 
