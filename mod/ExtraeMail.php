@@ -32,7 +32,7 @@ class ExtraeMail{
       $sub=explode("@",$subcadena);
       $host=explode(".",$sub[1]);
       if (isset($host[0])){
-        $this->debug.=$subcadena." tiene host definido<br/>";
+        $this->debug.=$subcadena." tiene host definido y este es $host[0]<br/>";
       }
       else {
         $this->debug.=$subcadena." no tiene host definido<br/>";
