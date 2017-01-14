@@ -70,8 +70,8 @@ class ExtraeMail{
         }
       }
       else {
-        $this->debug.="Host2 no definido: '".$cadena_2."'<br/>";
         $this->tld1="com";
+        $this->debug.="Host2 no definido: '".$this->tld1."'<br/>";
       }
 
       //punto de control - ok
