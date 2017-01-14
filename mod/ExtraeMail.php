@@ -136,7 +136,7 @@ class ExtraeMail{
         }
 
       $correoFinal=$usuario."@".$host[0].".".$this->tld1;
-
+      $this->debug.=$correoFinal."<br/>";
       if ($this->bool_tld2) {
         $correoFinal.=".".$this->tld2;
       }
