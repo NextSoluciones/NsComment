@@ -69,7 +69,7 @@ while ($flag > 0) {
   }
   $flag--;
 }
-
+echo "Debugg: ".$data->debug();
 //var_dump($cola);
 //echo "<br/>";
 //var_dump($res);
@@ -82,7 +82,6 @@ foreach ($res as $item) {
   } catch (Exception $e) {
     echo "<br/>Excepción: ".$e."<br/>";
   }
-  echo "Debugg: ".$data->debug();
   $correos=$data->getCorreos();
   $m=count($correos);
   for ($i=0; $i < $m; $i++) {
