@@ -4,7 +4,7 @@ class ExtraeMail{
   var $tld2;
   var $bool_tld2;
   var $correos=[];
-  var $debug="Iniciando debug...<br/>";
+  var $debug="joder...<br/>";
   public function getCorreos(){
     $temp=$this->correos;
     $this->correos=[];
@@ -115,6 +115,6 @@ class ExtraeMail{
 
     }
     $this->debug.="Fin<br/>";
-  }  
+  }
 }
 ?>
