@@ -87,7 +87,7 @@ class ExtraeMail{
           $temp2=$temp."@dominio.tld";
             if (filter_var($temp2, FILTER_VALIDATE_EMAIL)) {
               $usuario=$temp;
-              $this->debug.="Usuario definido: '".$usuario."'<br/>";
+
               $iterator--;
               if (($nuser+1)==abs($start)) {
                 $iterator--;
@@ -106,7 +106,7 @@ class ExtraeMail{
         }
 
       $correoFinal=$usuario."@".$host[0].".".$this->tld1;
-
+      $this->debug.="Correo Final: '".$correoFinal."'<br/>";
       if ($this->bool_tld2) {
         $correoFinal.=".".$this->tld2;
       }
