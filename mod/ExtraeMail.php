@@ -33,7 +33,6 @@ class ExtraeMail{
       $host=explode(".",$sub[1]);
       if (isset($host[1])&&strlen($host[1])>2){
         $cadena_2=$host[1];
-        $this->debug.="Host2: '".$cadena_2."'<br/>";
         $n2=strlen($cadena_2);
         for ($i=0; $i < $n2; $i++) {
           $temp=substr($cadena_2,0,($i+1));
@@ -71,7 +70,6 @@ class ExtraeMail{
       }
       else {
         $this->tld1="com";
-        $this->debug.="Host2 no definido: '".$this->tld1."'<br/>";
       }
 
       //punto de control - ok
@@ -89,6 +87,7 @@ class ExtraeMail{
           $temp2=$temp."@dominio.tld";
             if (filter_var($temp2, FILTER_VALIDATE_EMAIL)) {
               $usuario=$temp;
+              $this->debug.="Usuario definido: '".$usuario."'<br/>";
               $iterator--;
               if (($nuser+1)==abs($start)) {
                 $iterator--;
@@ -107,6 +106,7 @@ class ExtraeMail{
         }
 
       $correoFinal=$usuario."@".$host[0].".".$this->tld1;
+
       if ($this->bool_tld2) {
         $correoFinal.=".".$this->tld2;
       }
