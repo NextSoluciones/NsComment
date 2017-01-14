@@ -43,7 +43,7 @@ $cola[0]=$recurso;
 $icomment=0;
 while ($flag > 0) {
   try {
-    $response = $fb2->get('/'.$cola[$icomment].'/comments?fields=from,message,comment_count');
+    $response = $fb2->get('/'.$cola[$icomment].'/comments?fields=from,message,comment_count&limit=1500');
     //echo "<br>cola[".$icomment."]=".$cola[$icomment]."</br>";
     $postNode = $response->getGraphEdge();
     foreach ($postNode as $nodo) {
