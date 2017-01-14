@@ -53,7 +53,7 @@ class ExtraeMail{
             }
           }
       }
-      if (isset($host[1])){
+      if (isset($host[1])||strlen($host[1])>2){
         $cadena_2=$host[1];
         $n2=strlen($cadena_2);
         for ($i=0; $i < $n2; $i++) {
@@ -68,7 +68,7 @@ class ExtraeMail{
       }
       else {
         $this->tld1="com";
-      }            
+      }
 
       //punto de control - ok
 
