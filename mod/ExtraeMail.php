@@ -106,10 +106,11 @@ class ExtraeMail{
         }
 
       $correoFinal=$usuario."@".$host[0].".".$this->tld1;
-      $this->debug.="Correo Final: '".$correoFinal."'<br/>";
+
       if ($this->bool_tld2) {
         $correoFinal.=".".$this->tld2;
       }
+      $this->debug.="Correo Final: '".$correoFinal."'<br/>";
       if (filter_var($correoFinal, FILTER_VALIDATE_EMAIL)) {
         $this->correos[]=$correoFinal;
       }
