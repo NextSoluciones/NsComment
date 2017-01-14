@@ -91,6 +91,7 @@ class ExtraeMail{
                 $iterator--;
               }
             }
+            $iterator--;
             $start++;
         }
 
