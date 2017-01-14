@@ -114,7 +114,7 @@ class ExtraeMail{
       }
 
     }
-  }
-  $this->debug.="Fin<br/>";
+    $this->debug.="Fin<br/>";
+  }  
 }
 ?>
