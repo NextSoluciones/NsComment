@@ -83,6 +83,7 @@ class ExtraeMail{
             $long=strlen($temp);
             $temp2=$cadPre.$temp.$cadPost;
               if (filter_var($temp2, FILTER_VALIDATE_EMAIL)) {
+                $this->debug.="Filtro Válido: '".$temp2."'<br/>";
                 $host[0]=$temp;
                 $iterator--;
                 if ($long<=1) {
@@ -90,6 +91,7 @@ class ExtraeMail{
                 }
               }
               else {
+                $this->debug.="Filtro No Válido: '".$temp2."'<br/>";
                 if ($long>1) {
                   $iterator++;
                 }
