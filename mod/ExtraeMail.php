@@ -79,7 +79,12 @@ class ExtraeMail{
         $cadPost=".com";
         while ($iterator > 0&& $control<100) {
             $control++;
-            $temp=substr($cadenaHost,0,$startN);
+            if ($startN==0){
+              $temp=substr($cadenaHost,0);
+            }
+            else {
+              $temp=substr($cadenaHost,0,$startN);
+            }            
             $long=strlen($temp);
             $temp2=$cadPre.$temp.$cadPost;
               if (filter_var($temp2, FILTER_VALIDATE_EMAIL)) {
