@@ -49,7 +49,7 @@ while ($flag > 0) {
     foreach ($postNode as $nodo) {
         $vector=$nodo->asArray();
         $sub=$vector["comment_count"];
-        echo $vector["message"]."<br/>";
+        //echo $vector["message"]."<br/>";
         if ($sub > 0) {
           $iterator++;
           $flag++;
