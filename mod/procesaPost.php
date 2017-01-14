@@ -69,7 +69,7 @@ while ($flag > 0) {
   }
   $flag--;
 }
-echo "Debugg: ".$data->debug();
+
 //var_dump($cola);
 //echo "<br/>";
 //var_dump($res);
@@ -91,6 +91,8 @@ foreach ($res as $item) {
 }
 echo "</tbody></table></div>";
 echo "</form>";
+echo "Debugg: ".$data->debug();
+echo "<div class='fin'></div>";
 ?>
 <footer><ul id="pie">
   <li>Desarrollado por <a href="https://www.nslatino.com">Next Soluciones Inform&aacute;ticas</a> - Todos los derechos reservdos</li>
