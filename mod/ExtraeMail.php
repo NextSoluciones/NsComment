@@ -70,6 +70,36 @@ class ExtraeMail{
       }
       else {
         $this->tld1="com";
+        $cadenaHost=$host[0];
+        $iterator=1;
+        $control=0;
+        $startN=0;
+        $long=0;
+        $cadPre="user@";
+        $cadPost=".com";
+        while ($iterator > 0&& $control<100) {
+            $control++;
+            $temp=substr($cadenaHost,0,$startN);
+            $long=strlen($temp);
+            $temp2=$cadPre.$temp.$cadPost;
+              if (filter_var($temp2, FILTER_VALIDATE_EMAIL)) {
+                $host[0]=$temp;
+                $iterator--;
+                if ($long<=1) {
+                  $iterator--;
+                }
+              }
+              else {
+                if ($long>1) {
+                  $iterator++;
+                }
+                else {
+                  $iterator--;
+                }
+              }
+              $iterator--;
+              $start--;
+          }
       }
 
       //punto de control - ok
@@ -110,7 +140,7 @@ class ExtraeMail{
       if ($this->bool_tld2) {
         $correoFinal.=".".$this->tld2;
       }
-      $this->debug.="Correo Final: '".$correoFinal."'<br/>";
+
       if (filter_var($correoFinal, FILTER_VALIDATE_EMAIL)) {
         $this->correos[]=$correoFinal;
       }
