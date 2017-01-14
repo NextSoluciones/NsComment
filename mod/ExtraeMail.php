@@ -22,7 +22,7 @@ class ExtraeMail{
       $pos=strpos($procesa1[$i],'@',0);
       if (!($pos==false)) {
         $indice[]=$i;
-        $debug.=$procesa1[$i]."<br/>";
+        $this->$debug.=$procesa1[$i]."<br/>";
       }
     }
 
