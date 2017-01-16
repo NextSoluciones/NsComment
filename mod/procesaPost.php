@@ -87,7 +87,7 @@ foreach ($res as $item) {
   $m=count($correos);
   for ($i=0; $i < $m; $i++) {
     echo "<tr><td>".$item["from"]["name"]."</td><td>".$correos[$i]."</td></tr>";
-    echo "<input type='hidden' name='registro[]' value='".htmlspecialchars($item["from"]["name"]).",".htmlspecialchars($correos[$i])."\n'>";
+    echo "<input type='hidden' name='registro[]' value='".htmlspecialchars($item["from"]["name"],ENT_QUOTES).",".htmlspecialchars($correos[$i],ENT_QUOTES)."\n'>";
   }
 }
 echo "</tbody></table></div>";
