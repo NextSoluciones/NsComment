@@ -27,8 +27,8 @@ class ExtraeMail{
         $bandera=true;
         if ($pos==0) {
           $this->debug.="No hay nada antes del arroba<br/>";
-          $cadEM=trim($procesa1[$n]);
           while ($bandera) {
+            $cadEM=trim($procesa1[$n]);
             if (strlen($cadEM)>0) {
               $bandera=false;
               $preArrobaInd[]=$n;
