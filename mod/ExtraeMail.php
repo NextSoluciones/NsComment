@@ -63,7 +63,7 @@ class ExtraeMail{
         $this->debug.="Nuevo sub[0]='".$sub[0]."'<br/>";
       }
       $host=explode(".",$sub[1]);
-      if (isset($host[1])&&strlen($host[1])>2){
+      if (isset($host[1])&&strlen($host[1])>1){
         $cadena_2=$host[1];
         $n2=strlen($cadena_2);
         for ($i=0; $i < $n2; $i++) {
