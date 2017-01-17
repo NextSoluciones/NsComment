@@ -35,7 +35,7 @@ class ExtraeMail{
             }
             else {
               $n--;
-              if ($n==-1) {
+              if ($n<=0) {
                 $bandera=false;
               }
             }
