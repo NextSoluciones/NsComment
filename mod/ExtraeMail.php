@@ -32,6 +32,7 @@ class ExtraeMail{
             if (strlen($cadEM)>0) {
               $bandera=false;
               $preArrobaInd[]=$n;
+              $this->debug.="procesa1[n]".$procesa1[$n]."<br/>";
             }
             else {
               $n--;
