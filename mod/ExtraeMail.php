@@ -177,6 +177,11 @@ class ExtraeMail{
       }
 
     }
+    //Final de la funcion Extraer
+    ob_start();
+    var_dump($preArrobaInd);
+    $result = ob_get_clean();
+    $this->debug.=$result;
   }
 }
 ?>
