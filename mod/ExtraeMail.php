@@ -51,6 +51,7 @@ class ExtraeMail{
       $subcadena=$procesa1[$caso];
       $sub=explode("@",$subcadena);
       if (!(strlen($sub[0])>0)) { //ocurrirá cuando la cadena empieze en arroba
+        $this->debug.="Se dio el caso de usuario nulo";
         $m=$preArrobaInd[$caso];
         $sub[0]=$procesa1[$m];
       }
