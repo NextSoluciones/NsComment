@@ -51,7 +51,7 @@ $fb = new Facebook\Facebook([
 <section>
   <article class="busqueda">
     <form class="formulario" action="procesaPost.php" method="post">
-      <!-- <h2>Post Propio</h2> -->
+      <h2>Post Propio</h2>
       <span>Selecciona p&aacute;gina asociada: </span><select class="fanpage-select" name="fanpage">
         <?php
           foreach ($fanpL2 as $fp) {
@@ -65,12 +65,12 @@ $fb = new Facebook\Facebook([
       <span>Post a procesar (id.): </span><input type="text" name="id_post" value="" placeholder="p.e. <?=$id?>"/>
       <input type="submit" value="Procesar">
     </form>
-    <!-- <form class="formulario" action="procesaPost.php" method="post">
+    <form class="formulario" action="procesaPost.php" method="post">
       <h2>Post P&uacute;blico</h2>
-      <span>Ingrese id. de fanpage: </span><input type="text" name="id_fp" value="" placeholder="p.e. <?//=$id_fp?>"/>
+      <span>Ingrese url de fanpage: </span><input type="text" name="url_fp" value="" placeholder="p.e. https://www.facebook.com/EnappPeru"/>
       <span>Post a procesar (id.): </span><input type="text" name="id_post_fp" value="" placeholder="p.e. <?//=$id?>"/>
       <input type="submit" value="Procesar">
-    </form> -->
+    </form>
   </article>
 </section>
 <footer><ul id="pie">

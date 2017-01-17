@@ -23,9 +23,12 @@ $fb2 = new Facebook\Facebook([
   'app_secret' => $accesso->get_secret(),
   'default_graph_version' => $accesso->get_version()
 ]);
+$fb2->setDefaultAccessToken($_SESSION['facebook_access_token']);
 
-if (isset($_POST['id_fp'])) {
-  $id=$_POST['id_fp'];
+if (isset($_POST['url_fp'])) {
+  $url=$_POST['url_fp'];
+  $id=obtenerId($fb2,$url);
+  echo "<h1 note='id fp obtenida'>".$id."</h1>";
   $post=$_POST['id_post_fp'];
 }
 else {
@@ -34,7 +37,6 @@ else {
 }
 $recurso=$id."_".$post;
 $res = [];
-$fb2->setDefaultAccessToken($_SESSION['facebook_access_token']);
 
 $flag=1;
 $iterator=0;
@@ -94,6 +96,24 @@ echo "</tbody></table></div>";
 echo "</form>";
 //echo "Debugg: ".$data->debug();
 echo "<div class='fin'></div>";
+function foo($fbx, $urlx)
+{
+    $idx=0;
+    try {
+      $response = $fbx->get('/'.$urlx);
+      $userNode = $response->getGraphUser();
+      $idx=$userNode->getId();
+    } catch(Facebook\Exceptions\FacebookResponseException $e) {
+      // When Graph returns an error
+      echo 'Graph returned an error: ' . $e->getMessage();
+      exit;
+    } catch(Facebook\Exceptions\FacebookSDKException $e) {
+      // When validation fails or other local issues
+      echo 'Facebook SDK returned an error: ' . $e->getMessage();
+      exit;
+    }
+    return $idx;
+}
 ?>
 <footer><ul id="pie">
   <li>Desarrollado por <a href="https://www.nslatino.com">Next Soluciones Inform&aacute;ticas</a> - Todos los derechos reservdos</li>
