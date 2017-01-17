@@ -57,6 +57,7 @@ class ExtraeMail{
         $this->debug.="Se dio el caso de usuario nulo";
         $m=$preArrobaInd[$caso];
         $sub[0]=$procesa1[$m];
+        $this->debug.="Nuevo sub[0]='".$sub[0]."'<br/>";
       }
       $host=explode(".",$sub[1]);
       if (isset($host[1])&&strlen($host[1])>2){
