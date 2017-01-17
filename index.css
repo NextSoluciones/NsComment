@@ -118,3 +118,6 @@ div.dhtmlx_window_active, div.dhx_modal_cover_dv {
 .fin{
   padding-bottom: 15vh;
 }
+#url_fp{
+  width: 10em;
+}
