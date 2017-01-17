@@ -19,8 +19,8 @@ class ExtraeMail{
     $indice=[];
     $preArrobaInd=[];
     for ($i=0; $i < $n1; $i++) {
-      $pos=strpos($procesa1[$i],'@',0);      
-      if (!($pos==false)||$pos==0) {
+      $pos=strpos($procesa1[$i],'@',0);
+      if ($pos>=0) {
         $this->debug.="pos='".$pos."'<br/>";
         $indice[]=$i;
         $n=$i-1;
