@@ -185,7 +185,7 @@ class ExtraeMail{
     var_dump($preArrobaInd);
     $result = ob_get_clean();
     $this->debug.=$result;
-    $this->debug.="<br/>Punto de control B<br/>";
+    $this->debug.="<br/>Punto de control B<br/><br/>";
   }
 }
 ?>
