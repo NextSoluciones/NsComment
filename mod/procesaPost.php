@@ -96,7 +96,7 @@ echo "</tbody></table></div>";
 echo "</form>";
 //echo "Debugg: ".$data->debug();
 echo "<div class='fin'></div>";
-function foo($fbx, $urlx)
+function obtenerId($fbx, $urlx)
 {
     $idx=0;
     try {
