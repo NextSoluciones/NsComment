@@ -93,7 +93,7 @@ foreach ($res as $item) {
 }
 echo "</tbody></table></div>";
 echo "</form>";
-//echo "Debugg: ".$data->debug();
+echo "Debugg: ".$data->debug();
 echo "<div class='fin'></div>";
 function obtenerId($fbx, $urlx)
 {
