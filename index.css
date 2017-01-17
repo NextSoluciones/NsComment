@@ -119,5 +119,8 @@ div.dhtmlx_window_active, div.dhx_modal_cover_dv {
   padding-bottom: 15vh;
 }
 #url_fp{
-  width: 20em;
+  width: 20rem;
+}
+.formulario span{
+  width: 7rem;
 }
