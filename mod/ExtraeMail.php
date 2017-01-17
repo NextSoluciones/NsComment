@@ -50,7 +50,7 @@ class ExtraeMail{
     foreach ($indice as $caso) {
       $subcadena=$procesa1[$caso];
       $sub=explode("@",$subcadena);
-      $this->debug.="sub[0]='".$sub[0]."'";
+      $this->debug.="sub[0]='".$sub[0]."'<br/>";
       if (!(strlen($sub[0])>0)) { //ocurrirá cuando la cadena empieze en arroba
         $this->debug.="Se dio el caso de usuario nulo";
         $m=$preArrobaInd[$caso];
@@ -180,7 +180,7 @@ class ExtraeMail{
 
     }
     //Final de la funcion Extraer
-    $this->debug.="<br/>Punto de control A<br/>";
+    $this->debug.="Punto de control A<br/>";
     ob_start();
     var_dump($preArrobaInd);
     $result = ob_get_clean();
