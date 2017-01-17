@@ -9,9 +9,9 @@
   <body>
     <h1>Gestion de Comentarios</h1>
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', '1');
-ini_set('memory_limit', '512M');
+//error_reporting(E_ALL);
+//ini_set('display_errors', '1');
+//ini_set('memory_limit', '512M');
 session_start();
 include "./../bin/config.php";
 require_once "ExtraeMail.php";
@@ -28,7 +28,6 @@ $fb2->setDefaultAccessToken($_SESSION['facebook_access_token']);
 if (isset($_POST['url_fp'])) {
   $url=$_POST['url_fp'];
   $id=obtenerId($fb2,$url);
-  echo "<h1 note='id fp obtenida'>".$id."</h1>";
   $post=$_POST['id_post_fp'];
 }
 else {
