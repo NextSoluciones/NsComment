@@ -25,6 +25,7 @@ class ExtraeMail{
         $n=$i-1;
         $bandera=true;
         if ($pos==0) {
+          $this->debug.="No hay nada antes del arroba";
           $cadEM=trim($procesa1[$n]);
           while ($bandera) {
             if (strlen($cadEM)>0) {
