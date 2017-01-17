@@ -17,11 +17,31 @@ class ExtraeMail{
     $procesa1=explode(" ",$cad);
     $n1=count($procesa1);
     $indice=[];
-
+    $preArrobaInd=[];
     for ($i=0; $i < $n1; $i++) {
       $pos=strpos($procesa1[$i],'@',0);
       if (!($pos==false)) {
         $indice[]=$i;
+        $n=$i-1;
+        $bandera=true;
+        if ($pos==0) {
+          $cadEM=trim($procesa1[$n]);
+          while ($bandera) {
+            if (strlen($cadEM)>0) {
+              $bandera=false;
+              $preArrobaInd[]=$n;
+            }
+            else {
+              $n--;
+              if ($n==-1) {
+                $bandera=false;
+              }
+            }
+          }
+        }
+        else {
+          $preArrobaInd[]=0;
+        }
         // $cadxx=$procesa1[$i]."<br/>";
         // $this->debug.=$cadxx;
       }
@@ -29,6 +49,10 @@ class ExtraeMail{
 
     foreach ($indice as $caso) {
       $subcadena=$procesa1[$caso];
+      if (!(strlen($sub[0])>0)) { //ocurrirá cuando la cadena empieze en arroba
+        $m=$preArrobaInd[$caso];
+        $sub[0]=$procesa1[$m];
+      }
       $sub=explode("@",$subcadena);
       $host=explode(".",$sub[1]);
       if (isset($host[1])&&strlen($host[1])>2){
