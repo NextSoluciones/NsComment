@@ -50,9 +50,14 @@ $fb = new Facebook\Facebook([
 ?>
 <section>
   <article class="busqueda">
+    <table>
+    <tr>
+     <td colspan="2">
+
     <form class="formulario" action="procesaPost.php" method="post">
       <h2>Post Propio</h2>
-      <span>Selecciona p&aacute;gina asociada: </span><select class="fanpage-select" name="fanpage">
+  </td></tr> <tr><td>
+      <span>Selecciona p&aacute;gina asociada: </span></td><td><select class="fanpage-select" name="fanpage">
         <?php
           foreach ($fanpL2 as $fp) {
             $id_fp=$fp['id'];
@@ -62,15 +67,25 @@ $fb = new Facebook\Facebook([
         ?>
         <option value='<?=$id?>'><?=$userNode->getName()?></option>
       </select>
-      <span>Post a procesar (id.): </span><input type="text" name="id_post" value="" placeholder="p.e. <?=$id?>"/>
+    </td></tr> <tr> <td>
+
+      <span>Post a procesar (id.): </span></td><td><input type="text" name="id_post" value="" placeholder="p.e. <?=$id?>"/>
+</td></tr><tr> <td colspan="2">
       <input type="submit" value="Procesar">
     </form>
+  </td></tr><tr>  <td colspan="2">
+
     <form class="formulario" action="procesaPost.php" method="post">
       <h2>Post P&uacute;blico</h2>
-      <span>Ingrese url de fanpage: </span><input type="text" id="url_fp" name="url_fp" value="" placeholder="p.e. https://www.facebook.com/EnappPeru"/>
-      <span>Post a procesar (id.): </span><input type="text" name="id_post_fp" value="" placeholder="p.e. <?=$id?>"/>
+  </td></tr><tr><td>
+      <span>Ingrese url de fanpage: </span></td><td> <input type="text" id="url_fp" name="url_fp" value="" placeholder="p.e. https://www.facebook.com/EnappPeru"/>
+  </td></tr><tr><td>
+      <span>Post a procesar (id.): </span></td><td> <input type="text" name="id_post_fp" value="" placeholder="p.e. <?=$id?>"/>
+  </td></tr><tr><td colspan="2"> 
       <input type="submit" value="Procesar">
     </form>
+    </td></tr>
+  </table>
   </article>
 </section>
 <footer><ul id="pie">
