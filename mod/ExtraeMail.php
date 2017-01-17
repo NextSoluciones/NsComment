@@ -49,11 +49,11 @@ class ExtraeMail{
 
     foreach ($indice as $caso) {
       $subcadena=$procesa1[$caso];
+      $sub=explode("@",$subcadena);
       if (!(strlen($sub[0])>0)) { //ocurrirá cuando la cadena empieze en arroba
         $m=$preArrobaInd[$caso];
         $sub[0]=$procesa1[$m];
       }
-      $sub=explode("@",$subcadena);
       $host=explode(".",$sub[1]);
       if (isset($host[1])&&strlen($host[1])>2){
         $cadena_2=$host[1];
@@ -184,6 +184,6 @@ class ExtraeMail{
     $result = ob_get_clean();
     $this->debug.=$result;
     $this->debug.="<br/>Punto de control B<br/>";
-  }  
+  }
 }
 ?>
