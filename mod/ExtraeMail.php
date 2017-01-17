@@ -177,13 +177,13 @@ class ExtraeMail{
       }
 
     }
-  }
-  //Final de la funcion Extraer
-  $this->debug.="<br/>Punto de control A<br/>";
-  ob_start();
-  var_dump($preArrobaInd);
-  $result = ob_get_clean();
-  $this->debug.=$result;
-  $this->debug.="<br/>Punto de control B<br/>";
+    //Final de la funcion Extraer
+    $this->debug.="<br/>Punto de control A<br/>";
+    ob_start();
+    var_dump($preArrobaInd);
+    $result = ob_get_clean();
+    $this->debug.=$result;
+    $this->debug.="<br/>Punto de control B<br/>";
+  }  
 }
 ?>
