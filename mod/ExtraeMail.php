@@ -54,8 +54,9 @@ class ExtraeMail{
       $sub=explode("@",$subcadena);
       $this->debug.="sub[0]='".$sub[0]."'<br/>";
       if (!(strlen($sub[0])>0)) { //ocurrirá cuando la cadena empieze en arroba
-        $this->debug.="Se dio el caso de usuario nulo";
+        $this->debug.="Se dio el caso de usuario nulo<br/>";
         $m=$preArrobaInd[$caso];
+        $this->debug.="m='".$m."'<br/>";
         $sub[0]=$procesa1[$m];
         $this->debug.="Nuevo sub[0]='".$sub[0]."'<br/>";
       }
