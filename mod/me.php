@@ -75,7 +75,7 @@ $fb = new Facebook\Facebook([
 
       <label for="usr">Post a procesar (id.): </label></td><td><input type="text" id="usr" class="form-control" name="id_post" value="" placeholder="p.e. <?=$id?>"/>
 </td></tr><tr> <td colspan="2">
-      <input type="submit" value="Procesar">
+      <input type="submit" class="btn btn-primary btn-block" value="Procesar">
     </form>
   </td></tr><tr>  <td colspan="2">
 
@@ -86,7 +86,7 @@ $fb = new Facebook\Facebook([
   </td></tr><tr><td>
       <label for="id_fp">Post a procesar (id.): </label></td><td> <input type="text" id="id_fp" class="form-control" name="id_post_fp" value="" placeholder="p.e. <?=$id?>"/>
   </td></tr><tr><td colspan="2">
-      <input type="submit" value="Procesar">
+      <input type="submit" class="btn btn-primary btn-block" value="Procesar">
     </form>
     </td></tr>
   </table>
