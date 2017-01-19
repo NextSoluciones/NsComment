@@ -47,7 +47,7 @@ $fb = new Facebook\Facebook([
       exit;
     }
 
-    echo 'Haz iniciado sesión correctamente como ' . $userNode->getName()."<br/>";
+    echo 'Haz iniciado sesión correctamente como <small>' . $userNode->getName()."</small><br/>";
 
     $_SESSION['logueado'] =true;
     $id=$userNode->getId();
