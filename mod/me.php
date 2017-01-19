@@ -5,10 +5,12 @@
     <title>Sesion iniciada</title>
     <link rel="stylesheet" href="./../index.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
   </head>
   <body>
-    <h1>Gestion de Comentarios</h1>
-
+    <div class="page-header">
+    <h1>Obtener emails de comentarios <small>en post de Facebook</small></h1>
+    </div>
 <?php
 session_start();
 include "./../bin/config.php";
@@ -81,7 +83,7 @@ $fb = new Facebook\Facebook([
       <span>Ingrese url de fanpage: </span></td><td> <input type="text" id="url_fp" name="url_fp" value="" placeholder="p.e. https://www.facebook.com/EnappPeru"/>
   </td></tr><tr><td>
       <span>Post a procesar (id.): </span></td><td> <input type="text" name="id_post_fp" value="" placeholder="p.e. <?=$id?>"/>
-  </td></tr><tr><td colspan="2"> 
+  </td></tr><tr><td colspan="2">
       <input type="submit" value="Procesar">
     </form>
     </td></tr>
@@ -91,5 +93,6 @@ $fb = new Facebook\Facebook([
 <footer><ul id="pie">
   <li>Desarrollado por <a href="https://www.nslatino.com">Next Soluciones Inform&aacute;ticas</a> - Todos los derechos reservdos</li>
 </ul></footer>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 </body>
 </html>
