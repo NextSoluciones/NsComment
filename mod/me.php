@@ -54,13 +54,22 @@ $fb = new Facebook\Facebook([
 ?>
 <section>
   <article class="busqueda">
+    <div class="panel-group" id="accordion">
     <table id="formP">
-    <tr>
-     <td colspan="2">
 
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+          Post Propio</a>
+        </h4>
+    </div>
+    <div id="collapse1" class="panel-collapse collapse in">
+      <div class="panel-body">
     <form class="formulario" action="procesaPost.php" method="post">
-      <h2>Post Propio</h2>
-  </td></tr> <tr><td>
+
+   <tr><td>
       <label for="sel1">Selecciona p&aacute;gina asociada: </label></td><td><select id="sel1" class="fanpage-select form-control" name="fanpage">
         <?php
           foreach ($fanpL2 as $fp) {
@@ -77,11 +86,23 @@ $fb = new Facebook\Facebook([
 </td></tr><tr> <td colspan="2">
       <input type="submit" class="btn btn-primary btn-block" value="Procesar">
     </form>
-  </td></tr><tr>  <td colspan="2">
+  </td></tr>
+</div>
+</div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+        Post P&uacute;blico</a>
+      </h4>
+    </div>
+    <div id="collapse2" class="panel-collapse collapse">
+      <div class="panel-body">
 
     <form class="formulario" action="procesaPost.php" method="post">
-      <h2>Post P&uacute;blico</h2>
-  </td></tr><tr><td>
+
+  <tr><td>
       <label for="url_fp">Ingrese url de fanpage: </label></td><td> <input type="text" id="url_fp" class="form-control" name="url_fp" value="" placeholder="p.e. https://www.facebook.com/EnappPeru"/>
   </td></tr><tr><td>
       <label for="id_fp">Post a procesar (id.): </label></td><td> <input type="text" id="id_fp" class="form-control" name="id_post_fp" value="" placeholder="p.e. <?=$id?>"/>
@@ -90,6 +111,10 @@ $fb = new Facebook\Facebook([
     </form>
     </td></tr>
   </table>
+  </div>
+</div>
+  </div>
+</div>
   </article>
 </section>
 <footer><ul id="pie">
