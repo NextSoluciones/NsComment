@@ -61,7 +61,7 @@ $fb = new Facebook\Facebook([
     <form class="formulario" action="procesaPost.php" method="post">
       <h2>Post Propio</h2>
   </td></tr> <tr><td>
-      <span>Selecciona p&aacute;gina asociada: </span></td><td><select class="fanpage-select" name="fanpage">
+      <label for="sel1">Selecciona p&aacute;gina asociada: </label></td><td><select id="sel1" class="fanpage-select form-control" name="fanpage">
         <?php
           foreach ($fanpL2 as $fp) {
             $id_fp=$fp['id'];
