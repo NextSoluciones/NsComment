@@ -82,7 +82,7 @@ $fb = new Facebook\Facebook([
     <form class="formulario" action="procesaPost.php" method="post">
       <h2>Post P&uacute;blico</h2>
   </td></tr><tr><td>
-      <span>Ingrese url de fanpage: </span></td><td> <input type="text" id="url_fp" name="url_fp" value="" placeholder="p.e. https://www.facebook.com/EnappPeru"/>
+      <label for="url_fp">Ingrese url de fanpage: </label></td><td> <input type="text" id="url_fp" class="form-control" name="url_fp" value="" placeholder="p.e. https://www.facebook.com/EnappPeru"/>
   </td></tr><tr><td>
       <span>Post a procesar (id.): </span></td><td> <input type="text" name="id_post_fp" value="" placeholder="p.e. <?=$id?>"/>
   </td></tr><tr><td colspan="2">
