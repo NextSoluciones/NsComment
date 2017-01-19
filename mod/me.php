@@ -94,7 +94,7 @@ $fb = new Facebook\Facebook([
       <label for="url_fp">Ingrese url de fanpage: </label> <input type="text" id="url_fp" class="form-control" name="url_fp" value="" placeholder="p.e. https://www.facebook.com/EnappPeru"/>
       <label for="id_fp">Post a procesar (id.): </label> <input type="text" id="id_fp" class="form-control" name="id_post_fp" value="" placeholder="p.e. <?=$id?>"/>
       <input type="submit" class="btn btn-primary btn-block" value="Procesar">
-    </form> 
+    </form>
   </div>
 </div>
   </div>
@@ -104,6 +104,7 @@ $fb = new Facebook\Facebook([
 <footer><ul id="pie">
   <li>Desarrollado por <a href="https://www.nslatino.com">Next Soluciones Inform&aacute;ticas</a> - Todos los derechos reservdos</li>
 </ul></footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 </div>
 </body>
