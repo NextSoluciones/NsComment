@@ -55,9 +55,6 @@ $fb = new Facebook\Facebook([
 <section>
   <article class="busqueda">
     <div class="panel-group" id="accordion">
-    <table id="formP">
-
-
     <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
@@ -68,9 +65,7 @@ $fb = new Facebook\Facebook([
     <div id="collapse1" class="panel-collapse collapse in">
       <div class="panel-body">
     <form class="formulario" action="procesaPost.php" method="post">
-
-   <tr><td>
-      <label for="sel1">Selecciona p&aacute;gina asociada: </label></td><td><select id="sel1" class="fanpage-select form-control" name="fanpage">
+      <label for="sel1">Selecciona p&aacute;gina asociada: </label><select id="sel1" class="fanpage-select form-control" name="fanpage">
         <?php
           foreach ($fanpL2 as $fp) {
             $id_fp=$fp['id'];
@@ -80,13 +75,9 @@ $fb = new Facebook\Facebook([
         ?>
         <option value='<?=$id?>'><?=$userNode->getName()?></option>
       </select>
-    </td></tr> <tr> <td>
-
-      <label for="usr">Post a procesar (id.): </label></td><td><input type="text" id="usr" class="form-control" name="id_post" value="" placeholder="p.e. <?=$id?>"/>
-</td></tr><tr> <td colspan="2">
+      <label for="usr">Post a procesar (id.): </label><input type="text" id="usr" class="form-control" name="id_post" value="" placeholder="p.e. <?=$id?>"/>
       <input type="submit" class="btn btn-primary btn-block" value="Procesar">
     </form>
-  </td></tr>
 </div>
 </div>
   </div>
@@ -99,18 +90,11 @@ $fb = new Facebook\Facebook([
     </div>
     <div id="collapse2" class="panel-collapse collapse">
       <div class="panel-body">
-
     <form class="formulario" action="procesaPost.php" method="post">
-
-  <tr><td>
-      <label for="url_fp">Ingrese url de fanpage: </label></td><td> <input type="text" id="url_fp" class="form-control" name="url_fp" value="" placeholder="p.e. https://www.facebook.com/EnappPeru"/>
-  </td></tr><tr><td>
-      <label for="id_fp">Post a procesar (id.): </label></td><td> <input type="text" id="id_fp" class="form-control" name="id_post_fp" value="" placeholder="p.e. <?=$id?>"/>
-  </td></tr><tr><td colspan="2">
+      <label for="url_fp">Ingrese url de fanpage: </label> <input type="text" id="url_fp" class="form-control" name="url_fp" value="" placeholder="p.e. https://www.facebook.com/EnappPeru"/>
+      <label for="id_fp">Post a procesar (id.): </label> <input type="text" id="id_fp" class="form-control" name="id_post_fp" value="" placeholder="p.e. <?=$id?>"/>
       <input type="submit" class="btn btn-primary btn-block" value="Procesar">
-    </form>
-    </td></tr>
-  </table>
+    </form> 
   </div>
 </div>
   </div>
