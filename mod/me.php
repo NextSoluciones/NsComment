@@ -73,7 +73,7 @@ $fb = new Facebook\Facebook([
       </select>
     </td></tr> <tr> <td>
 
-      <span>Post a procesar (id.): </span></td><td><input type="text" name="id_post" value="" placeholder="p.e. <?=$id?>"/>
+      <label for="usr">Post a procesar (id.): </label></td><td><input type="text" id="usr" class="form-control" name="id_post" value="" placeholder="p.e. <?=$id?>"/>
 </td></tr><tr> <td colspan="2">
       <input type="submit" value="Procesar">
     </form>
