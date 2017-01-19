@@ -3,9 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>Sesion iniciada</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="./../index.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+
   </head>
   <body>
     <div class="page-header">
