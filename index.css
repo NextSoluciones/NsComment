@@ -127,6 +127,6 @@ div.dhtmlx_window_active, div.dhx_modal_cover_dv {
   width: 90%;
   padding: 0 2rem;
 }
-.container table{
-  border-spacing: 20px 10px;
+#formP td{
+  padding: 1rem;
 }

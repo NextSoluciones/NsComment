@@ -54,7 +54,7 @@ $fb = new Facebook\Facebook([
 ?>
 <section>
   <article class="busqueda">
-    <table>
+    <table id="formP">
     <tr>
      <td colspan="2">
 
