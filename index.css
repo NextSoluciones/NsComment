@@ -124,3 +124,9 @@ div.dhtmlx_window_active, div.dhx_modal_cover_dv {
 .formulario span{
   width: 7rem;
 }
+.container{
+  margin: 0 auto;
+  width: 90%;
+  padding: 2rem;
+  margin: 2rem;
+}

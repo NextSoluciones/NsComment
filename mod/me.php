@@ -9,6 +9,7 @@
 
   </head>
   <body>
+    <div class="container">
     <div class="page-header">
     <h1>Obtener emails de comentarios <small>en post de Facebook</small></h1>
     </div>
@@ -95,5 +96,6 @@ $fb = new Facebook\Facebook([
   <li>Desarrollado por <a href="https://www.nslatino.com">Next Soluciones Inform&aacute;ticas</a> - Todos los derechos reservdos</li>
 </ul></footer>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+</div>
 </body>
 </html>
