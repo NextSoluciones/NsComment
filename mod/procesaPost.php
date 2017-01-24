@@ -87,11 +87,11 @@ foreach ($res as $item) {
   $correos=$data->getCorreos();
   $m=count($correos);
   for ($i=0; $i < $m; $i++) {
-    echo "<tr><td>".$item["from"]["name"]."</td><td>".$correos[$i]."</td></tr>";
-    //echo "<input type='hidden' name='registro[]' value='".htmlspecialchars($item["from"]["name"],ENT_QUOTES).",".htmlspecialchars($correos[$i],ENT_QUOTES)."\n'>";
-    $nombre2417=htmlspecialchars($item["from"]["name"],ENT_QUOTES);
-    $nombre2417=htmlentities($nombre2417, ENT_QUOTES, "UTF-8");
-    echo "<input type='hidden' name='registro[]' value='".$nombre2417.",".htmlspecialchars($correos[$i],ENT_QUOTES)."\n'>";
+    $nombre24171226=$item["from"]["name"];
+    $nombre24171226=htmlentities($nombre24171226, ENT_QUOTES, "UTF-8");
+    echo "<tr><td>".$nombre24171226."</td><td>".$correos[$i]."</td></tr>";
+
+    echo "<input type='hidden' name='registro[]' value='".htmlspecialchars($item["from"]["name"],ENT_QUOTES).",".htmlspecialchars($correos[$i],ENT_QUOTES)."\n'>";
   }
 }
 echo "</tbody></table></div>";
