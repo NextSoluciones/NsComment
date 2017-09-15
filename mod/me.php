@@ -1,18 +1,3 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Sesion iniciada</title>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./../index.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet">
-
-  </head>
-  <body>
-    <div class="container">
-    <div class="page-header">
-    <h1>Obtener emails de comentarios <small>en post de Facebook</small></h1>
-    </div>
 <?php
 if(!session_id()) {
 session_start();
@@ -29,6 +14,22 @@ $fb = new Facebook\Facebook([
 ]);
 
 ?>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Sesion iniciada</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./../index.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet">
+
+  </head>
+  <body>
+    <div class="container">
+    <div class="page-header">
+    <h1>Obtener emails de comentarios <small>en post de Facebook</small></h1>
+    </div>
+
   <div class="logout"><a href="./../login/logout.php">Cerrar Sesi&oacute;n</a></div>
 <?php
     // Sets the default fallback access token so we don't have to pass it to each request

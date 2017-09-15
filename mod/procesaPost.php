@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>nscomment</title>
-    <link rel="stylesheet" href="./../index.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet">
-  </head>
-  <body>
-    <h1>Gestion de Comentarios</h1>
 <?php
 //error_reporting(E_ALL);
 //ini_set('display_errors', '1');
@@ -44,6 +34,18 @@ $iterator=0;
 $cola = [];
 $cola[0]=$recurso;
 $icomment=0;
+?>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>nscomment</title>
+    <link rel="stylesheet" href="./../index.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet">
+  </head>
+  <body>
+    <h1>Gestion de Comentarios</h1>
+<?php
 while ($flag > 0) {
   try {
     $response = $fb2->get('/'.$cola[$icomment].'/comments?fields=from,message,comment_count&limit=1500');
