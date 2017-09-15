@@ -12,7 +12,9 @@
 //error_reporting(E_ALL);
 //ini_set('display_errors', '1');
 //ini_set('memory_limit', '512M');
+if(!session_id()) {
 session_start();
+}
 include "./../bin/config.php";
 require_once "ExtraeMail.php";
 require_once __DIR__ . './../vendor/autoload.php';

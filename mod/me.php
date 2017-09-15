@@ -14,7 +14,9 @@
     <h1>Obtener emails de comentarios <small>en post de Facebook</small></h1>
     </div>
 <?php
+if(!session_id()) {
 session_start();
+}
 include "./../bin/config.php";
 require_once __DIR__ . './../vendor/autoload.php';
 
