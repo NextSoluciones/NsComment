@@ -1,7 +1,7 @@
 <?php
-//error_reporting(E_ALL);
-//ini_set('display_errors', '1');
-//ini_set('memory_limit', '512M');
+/*error_reporting(E_ALL);
+ini_set('display_errors', '1');*/
+ini_set('memory_limit', '512M');
 if(!session_id()) {
 session_start();
 }
@@ -16,7 +16,10 @@ $fb2 = new Facebook\Facebook([
   'default_graph_version' => $accesso->get_version()
 ]);
 $fb2->setDefaultAccessToken($_SESSION['facebook_access_token']);
-
+$responseNuevoToken=obtenerTokenPagina();  
+$paginas=obtenerArrTokensPag($responseNuevoToken);
+//var_dump($paginas);
+//echo "<br>";
 if (isset($_POST['url_fp'])) {
   $url=$_POST['url_fp'];
   $id=obtenerId($fb2,$url);
@@ -26,6 +29,15 @@ else {
   $id=$_POST['fanpage'];
   $post=$_POST['id_post'];
 }
+
+foreach ($paginas as $registro) {
+      if ($registro["id"]==$id){
+          //echo $registro["token"]."<br/>";
+          //echo $_SESSION['facebook_access_token']."<br/>";
+          $fb2->setDefaultAccessToken($registro["token"]);
+      }  
+}
+
 $recurso=$id."_".$post;
 $res = [];
 
@@ -76,9 +88,9 @@ while ($flag > 0) {
   $flag--;
 }
 
-//var_dump($cola);
-//echo "<br/>";
-//var_dump($res);
+/*var_dump($cola);
+echo "<br/>";
+var_dump($res);*/
 echo "<form id='formH' action='descargar.php' method='post'><input type='submit' value='Descargar'><br/>";
 echo "<div class='datagrid'><table><thead><tr><th>Usuario</th><th>Correo</th></tr></thead><tbody>";
 foreach ($res as $item) {
@@ -120,7 +132,52 @@ function obtenerId($fbx, $urlx)
     }
     return $idx;
 }
+function obtenerTokenPagina(){
+  $accesso= new Config();
+  $fb = new Facebook\Facebook([
+  'app_id' => $accesso->get_id(),
+  'app_secret' => $accesso->get_secret(),
+  'default_graph_version' => $accesso->get_version()
+  ]);
+
+try {
+  // Returns a `Facebook\FacebookResponse` object
+  $response = $fb->get('/me/accounts?fields=access_token', $_SESSION['facebook_access_token']);
+  } catch(Facebook\Exceptions\FacebookResponseException $e) {
+    echo 'Graph returned an error: ' . $e->getMessage();
+    exit;
+  } catch(Facebook\Exceptions\FacebookSDKException $e) {
+    echo 'Facebook SDK returned an error: ' . $e->getMessage();
+    exit;
+  }
+  return $response;
+
+}
+function obtenerArrTokensPag($responseNuevoToken){
+  //echo "<div class='panel panel-danger'>";
+  //var_dump($responseNuevoToken);
+  $data  = $responseNuevoToken->getGraphEdge();
+  //echo "hito1";
+  $paginas= array();
+  foreach ($data as $nodo) {
+        //Tratar $nodo como graphNode()
+    //echo "hito2";
+      $regitro= array();
+        $access_token=$nodo['access_token'];
+        $id=$nodo['id'];
+        /*echo $access_token;
+        echo $id;*/
+        $registro['id']=$id;
+        $registro['token']=$access_token;
+        array_push($paginas,$registro);
+    }
+  //var_dump($paginas);
+  //echo "</div>";
+    return $paginas;
+}
+  
 ?>
+
 <footer><ul id="pie">
   <li>Desarrollado por <a href="https://www.nslatino.com">Next Soluciones Inform&aacute;ticas</a> - Todos los derechos reservdos</li>
 </ul></footer>

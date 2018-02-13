@@ -12,7 +12,6 @@ $fb = new Facebook\Facebook([
   'app_secret' => $accesso->get_secret(),
   'default_graph_version' => $accesso->get_version()
 ]);
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -29,7 +28,6 @@ $fb = new Facebook\Facebook([
     <div class="page-header">
     <h1>Obtener emails de comentarios <small>en post de Facebook</small></h1>
     </div>
-
   <div class="logout"><a href="./../login/logout.php">Cerrar Sesi&oacute;n</a></div>
 <?php
     // Sets the default fallback access token so we don't have to pass it to each request

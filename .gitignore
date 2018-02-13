@@ -1,4 +1,4 @@
-vendor/*
+#vendor/*
 
 # -- Composer -----------------------------------------
 composer.phar
@@ -17,7 +17,7 @@ Session.vim
 *.pydevproject
 .project
 .metadata
-bin/**
+bin/config.php
 tmp/**
 tmp/**/*
 *.tmp

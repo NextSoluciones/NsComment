@@ -63,6 +63,7 @@ class ExtraeMail{
         $this->debug.="Nuevo sub[0]='".$sub[0]."'<br/>";
       }
       $host=explode(".",$sub[1]);
+      $long_host=count($host);
       if (isset($host[1])&&strlen($host[1])>1){
         $cadena_2=$host[1];
         $n2=strlen($cadena_2);
@@ -70,7 +71,8 @@ class ExtraeMail{
           $temp=substr($cadena_2,0,($i+1));
           if (ctype_alpha($temp)) {
             $this->tld1=$temp;
-            if (strlen($host[2])<3) {
+            if ($long_host>2){
+              if (strlen($host[2])<3) {
                 $this->tld2=$host[2];
                 if (ctype_alpha($this->tld2)) {
                   $this->bool_tld2=true;
@@ -78,22 +80,26 @@ class ExtraeMail{
                 else {
                   $this->bool_tld2=false;
                 }
-            }
-            else {
-                $this->tld2=substr($host[2],0,3);
-                if (ctype_alpha($this->tld2)) {
-                  $this->bool_tld2=false;
-                }
-                else {
-                  $this->tld2=substr($this->tld2,0,2);
+              }
+              else {
+                  $this->tld2=substr($host[2],0,3);
                   if (ctype_alpha($this->tld2)) {
-                    $this->bool_tld2=true;
-                  }
-                  else {
                     $this->bool_tld2=false;
                   }
-                }
+                  else {
+                    $this->tld2=substr($this->tld2,0,2);
+                    if (ctype_alpha($this->tld2)) {
+                      $this->bool_tld2=true;
+                    }
+                    else {
+                      $this->bool_tld2=false;
+                    }
+                  }
+              }
             }
+            else{
+              $this->bool_tld2=false;
+            }           
           }
           else {
             $this->bool_tld2=false;
